@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
     delete o;
     delete ow;
 
-    ros::NodeHandle nh_;
+    ros::NodeHandle nh;
 
     pedsim_msgs::LineObstacles allObs;
     pedsim_msgs::LineObstacle[] array = new pedsim_msgs::LineObstacle[2];
@@ -78,18 +78,98 @@ int main(int argc, char *argv[]) {
 
     allObs.obstacles = array;
 
+    pedsim_msgs::AgentStates allAgents;
+    pedsim_msgs::AgentState[] listOfAgents = new pedsim_msgs::AgentState[5];
+
+    for (int i = 0; i < 5; i++){
+	pedsim_msgs::AgentState currAgent;
+	currAgent.id = (uint64) i;
+	uint64 id = i;
+	uint16 type = 0;
+	currAgent.type = type;
+	string state = "individual_moving";
+	currAgent.social_state = state;
+	geometry_msgs::Pose agentPose;
+	geometry_msgs::Point posingPt;
+	posingPt.x = i;
+	posingPt.y = i;
+	posingPt.z = i;
+	geometry_msgs::Quaternion quat;
+	quat.x = 0;
+	quat.y = 0;
+	quat.z = 0;
+	quat.w = 0;
+	agentPose.position = posingPt;
+	agentPose.orientation quat;
+	
+	geometry_msgs::Twist twist;
+	geometry_msgs::Vector3 linear;
+	geometry_msgs::Vector3 angular;
+	linear.x = 0.5;
+	linear.y = 0.5;
+	linear.z = 0.5;
+	angular.x = 0.0;
+	angular.y = 0.0;
+	angular.z = 0.0;
+	twist.linear = linear;
+	twist.angular = angular;
+
+	pedsim_msgs::AgentForce force;
+	geometry_msgs::Vector3 desired;
+	desired.x = 0.5;
+	desired.y = 0.5;
+	desired.z = 0.5;
+	geometry_msgs::Vector3 obstacle;
+	obstacle.x = 0.1;
+	obstacle.y = 0.1;
+	obstacle.z = 0.1;
+	geometry_msgs::Vector3 social;
+	social.x = 0;
+	social.y = 0;
+	social.z = 0;
+	geometry_msgs::Vector3 coherence;
+	coherence.x = 0;
+	coherence.y = 0;
+	coherence.z = 0;
+	geometry_msgs::Vector3 gaze;
+	gaze.x = 0;
+	gaze.y = 0;
+	gaze.z = 0;
+	geometry_msgs::Vector3 repulsion;
+	repulsion.x = 0;
+	repulsion.y = 0;
+	repulsion.z = 0;
+	geometry_msgs::Vector3 random;
+	random.x = 0;
+	random.y = 0;
+	random.z = 0;
+	force.desired_force = desired;
+	force.obstacle_force = obstacle;
+	force.social_force = social;
+	force.group_coherence_force = coherence;
+	force.group_gaze_force = gaze;
+	force.group_repulsion_force = repulsion;
+	force.random_force = random;
+	// Setting all fields of currAgent equal to the above parameters
+	currAgent.pose = agentPose;
+	currAgent.twist = twist;
+	currAgent.forces = force; 
+	listOfAgents[i] = currAgent;
+    }
+	
+    allAgents.agent_states = listOfAgents;
     
 
     pub_obstacles_ = 
         nh.advertise<pedsim_msgs::LineObstacles>("simulated_walls", 1);
     pub_agent_states_ =
-	nh_.advertise<pedsim_msgs::AgentStates>("simulated_agents", 1);
+	nh.advertise<pedsim_msgs::AgentStates>("simulated_agents", 1);
     pub_agent_groups_ = 
-	nh_.advertise<pedsim_msgs::AgentGroups>("simulated_groups", 1);
+	nh.advertise<pedsim_msgs::AgentGroups>("simulated_groups", 1);
     pub_robot_position_ =
-	nh_.advertise<nav_msgs::Odometry>("robot_position", 1);
+	nh.advertise<nav_msgs::Odometry>("robot_position", 1);
     pub_waypoints_ =
-	nh_.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", 1);
+	nh.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", 1);
    
 
     /*
