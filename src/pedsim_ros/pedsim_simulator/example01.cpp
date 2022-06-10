@@ -5,6 +5,8 @@
 #include <cstdlib>
 #include <chrono>
 #include <thread>
+#include <stdio.h>
+#include <stdbool.h>
 
 #include "ped_includes.h"
 
@@ -41,20 +43,6 @@ int main(int argc, char *argv[]) {
 
         pedscene->addAgent(a);
     }
-
-    // Move all agents for 700 steps (and write their position through the outputwriter)
-    for (int i=0; i<700; ++i) {
-        pedscene->moveAgents(0.3);
-	std::this_thread::sleep_for(std::chrono::milliseconds(3));
-    }
-
-    // Cleanup
-    for (Ped::Tagent* agent : pedscene->getAllAgents()) delete agent;
-    delete pedscene;
-    delete w1;
-    delete w2;
-    delete o;
-    delete ow;
 
     ros::NodeHandle nh;
 
@@ -158,7 +146,101 @@ int main(int argc, char *argv[]) {
     }
 	
     allAgents.agent_states = listOfAgents;
+
+    pedsim_msgs::AgentGroups allGroups;
+    pedsim_msgs::AgentGroup[] listOfGroups = new pedsim_msgs::AgentGroup[1];
+
+    pedsim_msgs::AgentGroup group0;
+    group0.group_id = 0;
+    group0.age = 0;
+    uint64[] peds = new uint64[5];
+   
+    for (int i = 0; i < 5; i++) {
+	pedsim_msgs::AgentState agent = listOfAgent[i];
+	peds[i] = agent.id;
+    }
+
+    geometry_msgs::Pose center;
+    geometry_msgs::Point ctrPos;
+    geometry_msgs::Quaternion ctrOrientn;
+
+    center.x = 0;
+    center.y = 0;
+    center.z = 0;
+    ctrOrientn.x = 0;
+    ctrOrientn.y = 0;
+    ctrOrientn.z = 0;
+    ctrOrientn.w = 0;
+    center.position = ctrPos;
+    center.orientation = ctrOrientn;
+
+    group0.center_of_mass = center;
+    listOfGroups[0] = group0;
+    allGroups.groups = listOfGroups;
+
+    pedsim_msgs::TrackedPersons allPeds;
+    pedsim_msgs::TrackedPerson[] allTracks = new pedsim_msgs::TrackedPerson[5];
+
+    // Constant zero covariance matrix
+    float64[] covar = new float64[36];
+    for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < 6; j++) {
+	    covar[i][j] = 0;
+	}
+    }
+	
+    for (pedsim_msgs::AgentState agent : listOfAgents) {
+	uint64 i = agent.id;
+	pedsim_msgs::TrackedPerson peep;
+	peep.tracked_id = ped;
+	peep.is_occluded = false;
+	peep.is_matched = true;
+	peep.detection_id = ped;
+	peep.age = 0;
+	geometry_msgs::PoseWithCovariance poseWithCovar;
+	geometry_msgs::TwistWithCovariance twistWithCovar;
+	poseWithCovar.pose = agent.pose;
+	twistWithCovar.twist = agent.twist;
+	poseWithCovar.covariance = covar;
+	twistWithCovar.covariance = covar;
+	peep.pose = poseWithCovar;
+	peep.twist = twistWithCovar;
+	allTracks[ped] = peep;
+    } 
+
+    allPeds.tracks = allTracks;
     
+    pedsim_msgs::TrackedGroups tkdGroups;    
+    pedsim_msgs::TrackedGroup[] listOfTkdGroups = new pedsim_msgs::TrackedGroup[1];
+
+    pedsim_msgs::TrackedGroup grp;
+    grp.group_id = group0.group_id; 
+    grp.age = group0.age;
+
+    geometry_msgs::PoseWithCovariance groupPoseWithCovar;    
+    geometry_msgs::Pose groupPose;
+    geometry_msgs::Point groupPt;
+    groupPose.x = 2;
+    groupPose.y = 2;
+    groupPose.z = 2;
+    geometry_msgs::Quaternion grpOrientn;
+    grpOrientn.x = 0;
+    grpOrientn.y = 0;
+    grpOrientn.z = 0;
+    grpOrientn.w = 0;
+    groupPose.position = groupPt;
+    groupPose.orientation = grpOrientn; 
+    groupPoseWithCovar.pose = groupPose;
+    groupPoseWithCovar.covariance = covar;
+
+    grp.centerOfGravity = groupPoseWithCovar;
+    grp.track_ids = group0.members;
+	
+    listOfTkdGroups[0] = grp;
+    tkdGroups.groups = listOfTkdGroups;
+    
+
+    ros::nodeHandle nh;
 
     pub_obstacles_ = 
         nh.advertise<pedsim_msgs::LineObstacles>("simulated_walls", 1);
@@ -170,25 +252,31 @@ int main(int argc, char *argv[]) {
 	nh.advertise<nav_msgs::Odometry>("robot_position", 1);
     pub_waypoints_ =
 	nh.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", 1);
+
+    while (ros::ok()){
+    	pub_obstacles_.publish(allObs);
+	pub_agent_states_.publish(allAgents);
+//	pub_robot_position_.publish();
+//	pub_waypoints_.publish();
+
+	// Not needed: 
+	// ros::spinOnce();
+    }
    
+    // Move all agents for 700 steps (and write their position through the outputwriter)
+    for (int i=0; i<700; ++i) {
+        pedscene->moveAgents(0.3);
+	std::this_thread::sleep_for(std::chrono::milliseconds(3));
+    }
 
-    /*
-       // setup ros publishers
-  pub_obstacles_ =
-      nh_.advertise<pedsim_msgs::LineObstacles>("simulated_walls", queue_size);
-  pub_agent_states_ =
-      nh_.advertise<pedsim_msgs::AgentStates>("simulated_agents", queue_size);
-  pub_agent_groups_ =
-      nh_.advertise<pedsim_msgs::AgentGroups>("simulated_groups", queue_size);
-  pub_robot_position_ =
-      nh_.advertise<nav_msgs::Odometry>("robot_position", queue_size);
-  pub_waypoints_ =
-    nh_.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", queue_size);
-    */
+    // Cleanup
+    for (Ped::Tagent* agent : pedscene->getAllAgents()) delete agent;
+    delete pedscene;
+    delete w1;
+    delete w2;
+    delete o;
+    delete ow;
 
-    // example01.cpp has a different simulator system => diff ROS publishers need to be set up
-
-    
 
     return EXIT_SUCCESS;
 }
