@@ -1,4 +1,4 @@
-prefix=/home/clairechen/catkin_ws/devel
+prefix=/home/clairechen/pedsim_workspace/devel
 
 Name: spencer_tracking_rviz_plugin
 Description: Description of spencer_tracking_rviz_plugin

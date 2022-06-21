@@ -1,4 +1,4 @@
-prefix=/home/clairechen/catkin_ws/devel
+prefix=/home/clairechen/pedsim_workspace/devel
 
 Name: pedsim_gazebo_plugin
 Description: Description of pedsim_gazebo_plugin

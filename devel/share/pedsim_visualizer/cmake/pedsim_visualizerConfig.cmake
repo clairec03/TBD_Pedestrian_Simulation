@@ -67,14 +67,14 @@ set(pedsim_visualizer_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(pedsim_visualizer_SOURCE_PREFIX /home/clairechen/catkin_ws/src/pedsim_ros/pedsim_visualizer)
-  set(pedsim_visualizer_DEVEL_PREFIX /home/clairechen/catkin_ws/devel)
+  set(pedsim_visualizer_SOURCE_PREFIX /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer)
+  set(pedsim_visualizer_DEVEL_PREFIX /home/clairechen/pedsim_workspace/devel)
   set(pedsim_visualizer_INSTALL_PREFIX "")
   set(pedsim_visualizer_PREFIX ${pedsim_visualizer_DEVEL_PREFIX})
 else()
   set(pedsim_visualizer_SOURCE_PREFIX "")
   set(pedsim_visualizer_DEVEL_PREFIX "")
-  set(pedsim_visualizer_INSTALL_PREFIX /home/clairechen/catkin_ws/install)
+  set(pedsim_visualizer_INSTALL_PREFIX /home/clairechen/pedsim_workspace/install)
   set(pedsim_visualizer_PREFIX ${pedsim_visualizer_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(pedsim_visualizer_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/clairechen/catkin_ws/devel/include;/home/clairechen/catkin_ws/src/pedsim_ros/pedsim_visualizer/include " STREQUAL " ")
+if(NOT "/home/clairechen/pedsim_workspace/devel/include;/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/include " STREQUAL " ")
   set(pedsim_visualizer_INCLUDE_DIRS "")
-  set(_include_dirs "/home/clairechen/catkin_ws/devel/include;/home/clairechen/catkin_ws/src/pedsim_ros/pedsim_visualizer/include")
+  set(_include_dirs "/home/clairechen/pedsim_workspace/devel/include;/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/clairechen/catkin_ws/devel/include;/home/clairechen/catkin_ws/src/
         message(FATAL_ERROR "Project 'pedsim_visualizer' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'pedsim_visualizer' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/clairechen/catkin_ws/src/pedsim_ros/pedsim_visualizer/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'pedsim_visualizer' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/${idir}'.  ${_report}")
     endif()
     _list_append_unique(pedsim_visualizer_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/clairechen/catkin_ws/devel/lib;/home/clairechen/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/clairechen/pedsim_workspace/devel/lib;/home/clairechen/pedsim_workspace/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

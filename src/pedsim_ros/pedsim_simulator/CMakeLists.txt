@@ -25,6 +25,8 @@ set(CMAKE_AUTOUIC ON)
 find_package(catkin REQUIRED COMPONENTS ${PEDSIM_SIMULATOR_DEPENDENCIES})
 find_package(Boost REQUIRED)
 find_package(Qt5Widgets REQUIRED)
+# find_package(Qt6 REQUIRED COMPONENTS Core)
+# target_link_libraries(mytarget PRIVATE Qt6::Core)
 
 # dynamic reconfigure parameters
 generate_dynamic_reconfigure_options(config/PedsimSimulator.cfg)
@@ -41,7 +43,7 @@ include_directories(${Qt5Widgets_INCLUDES})
 add_definitions(${Qt5Widgets_DEFINITIONS})
 
 set(SOURCES
-  	src/simulator_node.cpp
+	#src/simulator_node.cpp
 	src/simulator.cpp
   	src/scene.cpp
   	src/config.cpp
@@ -75,10 +77,14 @@ set(SOURCES
 	src/waypointplanner/queueingplanner.cpp
 	src/waypointplanner/shoppingplanner.cpp
 	src/waypointplanner/groupwaypointplanner.cpp
+		
+	src/example01.cpp
+
 )
 
 
 set(MOC_FILES
+	
 	include/pedsim_simulator/config.h
 	include/pedsim_simulator/scene.h
 	include/pedsim_simulator/agentstatemachine.h
@@ -106,6 +112,7 @@ set(MOC_FILES
 	include/pedsim_simulator/waypointplanner/groupwaypointplanner.h
 	include/pedsim_simulator/waypointplanner/shoppingplanner.h
 	include/pedsim_simulator/waypointplanner/queueingplanner.h
+	
 )
 qt5_wrap_cpp(MOC_SRCS_UI ${MOC_FILES})
 
@@ -117,18 +124,18 @@ target_link_libraries(${EXECUTABLE_NAME}
   ${Qt5Widgets_LIBRARIES} ${BOOST_LIBRARIES} ${catkin_LIBRARIES}
 )
 
-add_executable(simulate_diff_drive_robot src/simulate_diff_drive_robot.cpp)
-add_dependencies(simulate_diff_drive_robot ${catkin_EXPORTED_TARGETS})
-target_link_libraries(simulate_diff_drive_robot ${BOOST_LIBRARIES} ${catkin_LIBRARIES})
+#add_executable(simulate_diff_drive_robot src/simulate_diff_drive_robot.cpp)
+#add_dependencies(simulate_diff_drive_robot ${catkin_EXPORTED_TARGETS})
+#target_link_libraries(simulate_diff_drive_robot ${BOOST_LIBRARIES} ${catkin_LIBRARIES})
 
-install(
-  TARGETS
-    ${EXECUTABLE_NAME}
-    simulate_diff_drive_robot
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#install(
+#  TARGETS
+#    ${EXECUTABLE_NAME}
+#    simulate_diff_drive_robot
+#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 
 ## Unit Tests
