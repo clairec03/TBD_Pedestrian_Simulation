@@ -129,9 +129,9 @@ target_link_libraries(${EXECUTABLE_NAME}
 
   ${Qt5Widgets_LIBRARIES} 
   ${BOOST_LIBRARIES} 
-  ~/pedsim/libpedsim/libpedsim.so
   ${catkin_LIBRARIES} 
   #/usr/local/lib/libpedsim.so 
+  ~/pedsim/libpedsim/libpedsim.so
 )
 
 #add_executable(simulate_diff_drive_robot src/simulate_diff_drive_robot.cpp)
