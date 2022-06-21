@@ -80,6 +80,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_utils/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/clairechen/pedsim/libpedsim"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
@@ -89,8 +90,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/DependInfo.cmake"
   "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_utils/CMakeFiles/pedsim_utils.dir/DependInfo.cmake"
+  "/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

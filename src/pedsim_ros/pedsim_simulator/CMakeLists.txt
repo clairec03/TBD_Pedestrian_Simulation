@@ -17,6 +17,8 @@ set(PEDSIM_SIMULATOR_DEPENDENCIES
   dynamic_reconfigure
 )
 
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/local/lib")
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -116,12 +118,20 @@ set(MOC_FILES
 )
 qt5_wrap_cpp(MOC_SRCS_UI ${MOC_FILES})
 
+include_directories(~/pedsim/libpedsim)
+
 set(EXECUTABLE_NAME ${PROJECT_NAME})
 add_executable(${EXECUTABLE_NAME} ${SOURCES} ${MOC_SRCS_UI})
 add_dependencies(${EXECUTABLE_NAME} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${EXECUTABLE_NAME} ${PROJECT_NAME}_gencfg)
+
 target_link_libraries(${EXECUTABLE_NAME}
-  ${Qt5Widgets_LIBRARIES} ${BOOST_LIBRARIES} ${catkin_LIBRARIES}
+
+  ${Qt5Widgets_LIBRARIES} 
+  ${BOOST_LIBRARIES} 
+  ~/pedsim/libpedsim/libpedsim.so
+  ${catkin_LIBRARIES} 
+  #/usr/local/lib/libpedsim.so 
 )
 
 #add_executable(simulate_diff_drive_robot src/simulate_diff_drive_robot.cpp)

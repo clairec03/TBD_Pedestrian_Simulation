@@ -7,4 +7,10 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/clairechen/pedsim_workspace/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/clairechen/pedsim_workspace/devel/lib:/opt/ros/noetic/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/clairechen/pedsim_workspace/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/clairechen/pedsim_workspace/build'
+export PYTHONPATH="/home/clairechen/pedsim_workspace/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/clairechen/pedsim_workspace/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/clairechen/catkin_ws/src:/home/clairechen/pedsim_workspace/src:$ROS_PACKAGE_PATH"

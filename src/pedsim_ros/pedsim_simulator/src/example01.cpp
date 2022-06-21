@@ -8,17 +8,53 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include <ros/ros.h>
+
+/*
 #include <pedsim/ped_agent.h>
 #include <pedsim/ped_obstacle.h>
 #include <pedsim/ped_waypoint.h>
-#include <pedsim/ped_scene.h>
+#include <pedsim/ped_scene.h> 
+*/
 
-#include <pedsim_simulator/simulator.h>
+//#include "ped_include.h"
+
+#include "ped_agent.h"
+#include "ped_obstacle.h"
+#include "ped_waypoint.h"
+#include "ped_scene.h"
+
+//#include <pedsim_simulator/simulator.h>
+
+#include <pedsim_msgs/AgentForce.h>
+#include <pedsim_msgs/AgentGroup.h>
+#include <pedsim_msgs/AgentGroups.h>
+#include <pedsim_msgs/AgentState.h>
+#include <pedsim_msgs/AgentStates.h>
+#include <pedsim_msgs/LineObstacle.h>
+#include <pedsim_msgs/LineObstacles.h>
+#include <pedsim_msgs/Waypoint.h>
+#include <pedsim_msgs/Waypoints.h>
+#include <pedsim_msgs/TrackedPersons.h>
+#include <pedsim_msgs/TrackedPerson.h>
+#include <pedsim_msgs/TrackedGroups.h>
+#include <pedsim_msgs/TrackedGroup.h>
+
+#include <geometry_msgs/Point.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/PoseWithCovariance.h>
+#include <geometry_msgs/TwistWithCovariance.h>
+#include <nav_msgs/Odometry.h>
+#include <std_msgs/Header.h>
+#include <std_srvs/Empty.h>
+
 #include <QApplication>
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
+
+    ros::Duration one_sec(1.0);
 
     // create an output writer which will send output to a file 
 //    Ped::OutputWriter *ow = new Ped::FileOutputWriter();
@@ -51,33 +87,35 @@ int main(int argc, char *argv[]) {
     ros::NodeHandle nh;
 
     pedsim_msgs::LineObstacles allObs;
-    pedsim_msgs::LineObstacle[] array = new pedsim_msgs::LineObstacle[2];
+    //pedsim_msgs::LineObstacle[] array = new pedsim_msgs::LineObstacle[2];
+    pedsim_msgs::LineObstacle array[2];
 
     for (int i = 0; i < 2; i++) {
 	pedsim_msgs::LineObstacle obs;
     	geometry_msgs::Point start;
-	start.x = (float64)0;
-	start.y = (float64)0;
-	start.z = (float64)0;
+	start.x = 0;
+	start.y = 0;
+	start.z = 0;
     	geometry_msgs::Point end;
-	end.x = (float64)i;
-	end.y = (float64)i;
-	end.z = (float64)i;
+	end.x = i;
+	end.y = i;
+	end.z = i;
 	obs.start = start;
 	obs.end = end;
 	array[i] = obs;
+	allObs.obstacles[i] = array[i];
     }
 
-    allObs.obstacles = array;
+    //allObs.obstacles = array;
 
     pedsim_msgs::AgentStates allAgents;
-    pedsim_msgs::AgentState[] listOfAgents = new pedsim_msgs::AgentState[5];
+    pedsim_msgs::AgentState listOfAgents[5];
 
     for (int i = 0; i < 5; i++){
 	pedsim_msgs::AgentState currAgent;
-	currAgent.id = (uint64) i;
-	uint64 id = i;
-	uint16 type = 0;
+	currAgent.id = i;
+	unsigned int id = i;
+	unsigned int type = 0;
 	currAgent.type = type;
 	string state = "individual_moving";
 	currAgent.social_state = state;
@@ -92,7 +130,7 @@ int main(int argc, char *argv[]) {
 	quat.z = 0;
 	quat.w = 0;
 	agentPose.position = posingPt;
-	agentPose.orientation quat;
+	agentPose.orientation = quat;
 	
 	geometry_msgs::Twist twist;
 	geometry_msgs::Vector3 linear;
@@ -147,20 +185,21 @@ int main(int argc, char *argv[]) {
 	currAgent.twist = twist;
 	currAgent.forces = force; 
 	listOfAgents[i] = currAgent;
+	allAgents.agent_states[i] = listOfAgents[i];
     }
 	
-    allAgents.agent_states = listOfAgents;
+    //allAgents.agent_states = listOfAgents;
 
     pedsim_msgs::AgentGroups allGroups;
-    pedsim_msgs::AgentGroup[] listOfGroups = new pedsim_msgs::AgentGroup[1];
+    pedsim_msgs::AgentGroup listOfGroups[1];
 
     pedsim_msgs::AgentGroup group0;
     group0.group_id = 0;
     group0.age = 0;
-    uint64[] peds = new uint64[5];
+    unsigned int peds[5];
    
     for (int i = 0; i < 5; i++) {
-	pedsim_msgs::AgentState agent = listOfAgent[i];
+	pedsim_msgs::AgentState agent = listOfAgents[i];
 	peds[i] = agent.id;
     }
 
@@ -168,9 +207,9 @@ int main(int argc, char *argv[]) {
     geometry_msgs::Point ctrPos;
     geometry_msgs::Quaternion ctrOrientn;
 
-    center.x = 0;
-    center.y = 0;
-    center.z = 0;
+    ctrPos.x = 0;
+    ctrPos.y = 0;
+    ctrPos.z = 0;
     ctrOrientn.x = 0;
     ctrOrientn.y = 0;
     ctrOrientn.z = 0;
@@ -180,53 +219,54 @@ int main(int argc, char *argv[]) {
 
     group0.center_of_mass = center;
     listOfGroups[0] = group0;
-    allGroups.groups = listOfGroups;
+    allGroups.groups[0] = listOfGroups[0];
 
     pedsim_msgs::TrackedPersons allPeds;
-    pedsim_msgs::TrackedPerson[] allTracks = new pedsim_msgs::TrackedPerson[5];
+    pedsim_msgs::TrackedPerson allTracks[5];
 
     // Constant zero covariance matrix
-    float64[] covar = new float64[36];
-    for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 6; j++) {
-	    covar[i][j] = 0;
-	}
+    double covar[36];
+    for (int i = 0; i < 36; i++) {
+        covar[i] = 0;
     }
 	
     for (pedsim_msgs::AgentState agent : listOfAgents) {
-	uint64 i = agent.id;
+	unsigned int i = agent.id;
 	pedsim_msgs::TrackedPerson peep;
-	peep.tracked_id = ped;
+	peep.track_id = i;
 	peep.is_occluded = false;
 	peep.is_matched = true;
-	peep.detection_id = ped;
-	peep.age = 0;
+	peep.detection_id = i;
+	peep.age = one_sec;
 	geometry_msgs::PoseWithCovariance poseWithCovar;
 	geometry_msgs::TwistWithCovariance twistWithCovar;
 	poseWithCovar.pose = agent.pose;
 	twistWithCovar.twist = agent.twist;
-	poseWithCovar.covariance = covar;
-	twistWithCovar.covariance = covar;
+        for (int j = 0; j < 36; j++) {
+	    poseWithCovar.covariance[j] = covar[j];
+	    twistWithCovar.covariance[j] = covar[j];
+        }
 	peep.pose = poseWithCovar;
 	peep.twist = twistWithCovar;
-	allTracks[ped] = peep;
+	allTracks[i] = peep;
+        allPeds.tracks[i] = allTracks[i];
     } 
 
-    allPeds.tracks = allTracks;
+    //allPeds.tracks = allTracks;
     
     pedsim_msgs::TrackedGroups tkdGroups;    
-    pedsim_msgs::TrackedGroup[] listOfTkdGroups = new pedsim_msgs::TrackedGroup[1];
+    pedsim_msgs::TrackedGroup listOfTkdGroups[1];
 
     pedsim_msgs::TrackedGroup grp;
     grp.group_id = group0.group_id; 
-    grp.age = group0.age;
+    grp.age = one_sec;
 
     geometry_msgs::PoseWithCovariance groupPoseWithCovar;    
     geometry_msgs::Pose groupPose;
     geometry_msgs::Point groupPt;
-    groupPose.x = 2;
-    groupPose.y = 2;
-    groupPose.z = 2;
+    groupPt.x = 2;
+    groupPt.y = 2;
+    groupPt.z = 2;
     geometry_msgs::Quaternion grpOrientn;
     grpOrientn.x = 0;
     grpOrientn.y = 0;
@@ -235,26 +275,26 @@ int main(int argc, char *argv[]) {
     groupPose.position = groupPt;
     groupPose.orientation = grpOrientn; 
     groupPoseWithCovar.pose = groupPose;
-    groupPoseWithCovar.covariance = covar;
+    for (int i = 0; i < 36; i++) {
+    	groupPoseWithCovar.covariance[i] = covar[i];
+    }
 
     grp.centerOfGravity = groupPoseWithCovar;
     grp.track_ids = group0.members;
 	
     listOfTkdGroups[0] = grp;
-    tkdGroups.groups = listOfTkdGroups;
+    tkdGroups.groups[0] = listOfTkdGroups[0];
     
 
-    ros::nodeHandle nh;
-
-    pub_obstacles_ = 
+    ros::Publisher pub_obstacles_ = 
         nh.advertise<pedsim_msgs::LineObstacles>("simulated_walls", 1);
-    pub_agent_states_ =
+    ros::Publisher pub_agent_states_ =
 	nh.advertise<pedsim_msgs::AgentStates>("simulated_agents", 1);
-    pub_agent_groups_ = 
+    ros::Publisher pub_agent_groups_ = 
 	nh.advertise<pedsim_msgs::AgentGroups>("simulated_groups", 1);
-    pub_robot_position_ =
+    ros::Publisher pub_robot_position_ =
 	nh.advertise<nav_msgs::Odometry>("robot_position", 1);
-    pub_waypoints_ =
+    ros::Publisher pub_waypoints_ =
 	nh.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", 1);
 
     while (ros::ok()){
