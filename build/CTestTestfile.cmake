@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("pedsim_ros/pedsim_ros")
+subdirs("pedsim_ros/3rdparty/libpedsim_original")
 subdirs("pedsim_ros/3rdparty/libpedsim")
 subdirs("pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs")
 subdirs("pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs")

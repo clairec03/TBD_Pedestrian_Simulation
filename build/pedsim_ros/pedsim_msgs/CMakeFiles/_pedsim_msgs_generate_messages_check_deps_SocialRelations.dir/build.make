@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/clairechen/pedsim_workspace/build
 include pedsim_ros/pedsim_msgs/CMakeFiles/_pedsim_msgs_generate_messages_check_deps_SocialRelations.dir/progress.make
 
 pedsim_ros/pedsim_msgs/CMakeFiles/_pedsim_msgs_generate_messages_check_deps_SocialRelations:
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pedsim_msgs /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_msgs/msg/SocialRelations.msg pedsim_msgs/SocialRelation:std_msgs/Header
+	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pedsim_msgs /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_msgs/msg/SocialRelations.msg std_msgs/Header:pedsim_msgs/SocialRelation
 
 _pedsim_msgs_generate_messages_check_deps_SocialRelations: pedsim_ros/pedsim_msgs/CMakeFiles/_pedsim_msgs_generate_messages_check_deps_SocialRelations
 _pedsim_msgs_generate_messages_check_deps_SocialRelations: pedsim_ros/pedsim_msgs/CMakeFiles/_pedsim_msgs_generate_messages_check_deps_SocialRelations.dir/build.make

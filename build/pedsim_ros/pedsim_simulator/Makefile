@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/clairechen/pedsim_workspace/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -135,6 +123,18 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/clairechen/pedsim_workspace/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/progress.marks
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/rule:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/rule
+.PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/rule
+
+# Convenience name for target.
+simulate_diff_drive_robot: pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/rule
+
+.PHONY : simulate_diff_drive_robot
+
+# fast build rule for target.
+simulate_diff_drive_robot/fast:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build
+.PHONY : simulate_diff_drive_robot/fast
+
+# Convenience name for target.
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/rule:
 	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/rule
 .PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/rule
@@ -196,6 +211,21 @@ pedsim_simulator_gencfg: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator
 pedsim_simulator_gencfg/fast:
 	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_gencfg.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_gencfg.dir/build
 .PHONY : pedsim_simulator_gencfg/fast
+
+# Convenience name for target.
+pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/rule:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/rule
+.PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/rule
+
+# Convenience name for target.
+simulate_diff_drive_robot_autogen: pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/rule
+
+.PHONY : simulate_diff_drive_robot_autogen
+
+# fast build rule for target.
+simulate_diff_drive_robot_autogen/fast:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/build
+.PHONY : simulate_diff_drive_robot_autogen/fast
 
 # Convenience name for target.
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/rule:
@@ -887,6 +917,33 @@ pedsim_simulator_autogen/mocs_compilation.cpp.s:
 	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/pedsim_simulator_autogen/mocs_compilation.cpp.s
 .PHONY : pedsim_simulator_autogen/mocs_compilation.cpp.s
 
+simulate_diff_drive_robot_autogen/mocs_compilation.o: simulate_diff_drive_robot_autogen/mocs_compilation.cpp.o
+
+.PHONY : simulate_diff_drive_robot_autogen/mocs_compilation.o
+
+# target to build an object file
+simulate_diff_drive_robot_autogen/mocs_compilation.cpp.o:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/simulate_diff_drive_robot_autogen/mocs_compilation.cpp.o
+.PHONY : simulate_diff_drive_robot_autogen/mocs_compilation.cpp.o
+
+simulate_diff_drive_robot_autogen/mocs_compilation.i: simulate_diff_drive_robot_autogen/mocs_compilation.cpp.i
+
+.PHONY : simulate_diff_drive_robot_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+simulate_diff_drive_robot_autogen/mocs_compilation.cpp.i:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/simulate_diff_drive_robot_autogen/mocs_compilation.cpp.i
+.PHONY : simulate_diff_drive_robot_autogen/mocs_compilation.cpp.i
+
+simulate_diff_drive_robot_autogen/mocs_compilation.s: simulate_diff_drive_robot_autogen/mocs_compilation.cpp.s
+
+.PHONY : simulate_diff_drive_robot_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+simulate_diff_drive_robot_autogen/mocs_compilation.cpp.s:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/simulate_diff_drive_robot_autogen/mocs_compilation.cpp.s
+.PHONY : simulate_diff_drive_robot_autogen/mocs_compilation.cpp.s
+
 src/agentstatemachine.o: src/agentstatemachine.cpp.o
 
 .PHONY : src/agentstatemachine.o
@@ -1481,32 +1538,32 @@ src/scene.cpp.s:
 	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/scene.cpp.s
 .PHONY : src/scene.cpp.s
 
-src/simulator.o: src/simulator.cpp.o
+src/simulate_diff_drive_robot.o: src/simulate_diff_drive_robot.cpp.o
 
-.PHONY : src/simulator.o
+.PHONY : src/simulate_diff_drive_robot.o
 
 # target to build an object file
-src/simulator.cpp.o:
-	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o
-.PHONY : src/simulator.cpp.o
+src/simulate_diff_drive_robot.cpp.o:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/src/simulate_diff_drive_robot.cpp.o
+.PHONY : src/simulate_diff_drive_robot.cpp.o
 
-src/simulator.i: src/simulator.cpp.i
+src/simulate_diff_drive_robot.i: src/simulate_diff_drive_robot.cpp.i
 
-.PHONY : src/simulator.i
+.PHONY : src/simulate_diff_drive_robot.i
 
 # target to preprocess a source file
-src/simulator.cpp.i:
-	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.i
-.PHONY : src/simulator.cpp.i
+src/simulate_diff_drive_robot.cpp.i:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/src/simulate_diff_drive_robot.cpp.i
+.PHONY : src/simulate_diff_drive_robot.cpp.i
 
-src/simulator.s: src/simulator.cpp.s
+src/simulate_diff_drive_robot.s: src/simulate_diff_drive_robot.cpp.s
 
-.PHONY : src/simulator.s
+.PHONY : src/simulate_diff_drive_robot.s
 
 # target to generate assembly for a file
-src/simulator.cpp.s:
-	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.s
-.PHONY : src/simulator.cpp.s
+src/simulate_diff_drive_robot.cpp.s:
+	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/src/simulate_diff_drive_robot.cpp.s
+.PHONY : src/simulate_diff_drive_robot.cpp.s
 
 src/waypointplanner/groupwaypointplanner.o: src/waypointplanner/groupwaypointplanner.cpp.o
 
@@ -1649,15 +1706,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/strip"
+	@echo "... simulate_diff_drive_robot"
 	@echo "... pedsim_simulator"
 	@echo "... pedsim_simulator_gencfg"
+	@echo "... simulate_diff_drive_robot_autogen"
 	@echo "... pedsim_simulator_autogen"
 	@echo "... include/pedsim_simulator/element/moc_agent.o"
 	@echo "... include/pedsim_simulator/element/moc_agent.i"
@@ -1734,6 +1793,9 @@ help:
 	@echo "... pedsim_simulator_autogen/mocs_compilation.o"
 	@echo "... pedsim_simulator_autogen/mocs_compilation.i"
 	@echo "... pedsim_simulator_autogen/mocs_compilation.s"
+	@echo "... simulate_diff_drive_robot_autogen/mocs_compilation.o"
+	@echo "... simulate_diff_drive_robot_autogen/mocs_compilation.i"
+	@echo "... simulate_diff_drive_robot_autogen/mocs_compilation.s"
 	@echo "... src/agentstatemachine.o"
 	@echo "... src/agentstatemachine.i"
 	@echo "... src/agentstatemachine.s"
@@ -1800,9 +1862,9 @@ help:
 	@echo "... src/scene.o"
 	@echo "... src/scene.i"
 	@echo "... src/scene.s"
-	@echo "... src/simulator.o"
-	@echo "... src/simulator.i"
-	@echo "... src/simulator.s"
+	@echo "... src/simulate_diff_drive_robot.o"
+	@echo "... src/simulate_diff_drive_robot.i"
+	@echo "... src/simulate_diff_drive_robot.s"
 	@echo "... src/waypointplanner/groupwaypointplanner.o"
 	@echo "... src/waypointplanner/groupwaypointplanner.i"
 	@echo "... src/waypointplanner/groupwaypointplanner.s"

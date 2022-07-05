@@ -307,7 +307,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -320,7 +320,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -333,7 +333,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -346,7 +346,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -359,8 +359,151 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_py.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named libpedsim_original
+
+# Build rule for target.
+libpedsim_original: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libpedsim_original
+.PHONY : libpedsim_original
+
+# fast build rule for target.
+libpedsim_original/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build
+.PHONY : libpedsim_original/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named pedsim
@@ -374,136 +517,6 @@ pedsim: cmake_check_build_system
 pedsim/fast:
 	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/build
 .PHONY : pedsim/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_py.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
-
-# Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pedsim_ros/3rdparty/libpedsim/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named spencer_human_attribute_msgs_genpy
@@ -2859,6 +2872,19 @@ pedsim_people_sensor/fast:
 .PHONY : pedsim_people_sensor/fast
 
 #=============================================================================
+# Target rules for targets named simulate_diff_drive_robot
+
+# Build rule for target.
+simulate_diff_drive_robot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simulate_diff_drive_robot
+.PHONY : simulate_diff_drive_robot
+
+# fast build rule for target.
+simulate_diff_drive_robot/fast:
+	$(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/build
+.PHONY : simulate_diff_drive_robot/fast
+
+#=============================================================================
 # Target rules for targets named pedsim_simulator
 
 # Build rule for target.
@@ -2883,6 +2909,19 @@ pedsim_simulator_gencfg: cmake_check_build_system
 pedsim_simulator_gencfg/fast:
 	$(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_gencfg.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_gencfg.dir/build
 .PHONY : pedsim_simulator_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named simulate_diff_drive_robot_autogen
+
+# Build rule for target.
+simulate_diff_drive_robot_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simulate_diff_drive_robot_autogen
+.PHONY : simulate_diff_drive_robot_autogen
+
+# fast build rule for target.
+simulate_diff_drive_robot_autogen/fast:
+	$(MAKE) -f pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/build.make pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/build
+.PHONY : simulate_diff_drive_robot_autogen/fast
 
 #=============================================================================
 # Target rules for targets named pedsim_simulator_autogen
@@ -3068,9 +3107,9 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... pedsim"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... libpedsim_original"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
@@ -3079,6 +3118,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... pedsim"
 	@echo "... spencer_human_attribute_msgs_genpy"
 	@echo "... _spencer_human_attribute_msgs_generate_messages_check_deps_HumanAttributes"
 	@echo "... spencer_human_attribute_msgs_generate_messages"
@@ -3260,8 +3300,10 @@ help:
 	@echo "... pedsim_occlusion_sensor"
 	@echo "... pedsim_obstacle_sensor"
 	@echo "... pedsim_people_sensor"
+	@echo "... simulate_diff_drive_robot"
 	@echo "... pedsim_simulator"
 	@echo "... pedsim_simulator_gencfg"
+	@echo "... simulate_diff_drive_robot_autogen"
 	@echo "... pedsim_simulator_autogen"
 	@echo "... rviz_generate_messages_eus"
 	@echo "... spencer_tracking_rviz_plugin"

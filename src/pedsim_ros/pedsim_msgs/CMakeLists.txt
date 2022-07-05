@@ -7,6 +7,7 @@ set(MESSAGE_DEPENDENCIES
   geometry_msgs
   sensor_msgs
   nav_msgs
+  #  message_generation
 )
 
 find_package(catkin REQUIRED COMPONENTS message_generation ${MESSAGE_DEPENDENCIES})

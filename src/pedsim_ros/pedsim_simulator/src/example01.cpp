@@ -51,6 +51,15 @@
 
 using namespace std;
 
+string frame = "odom";
+
+std_msgs::Header createMsgHeader() {
+  std_msgs::Header msg_header;
+  msg_header.stamp = ros::Time::now();
+  msg_header.frame_id = frame;
+  return msg_header;
+}
+
 int main(int argc, char *argv[]) {
 
     ros::Duration one_sec(1.0);
@@ -110,13 +119,16 @@ int main(int argc, char *argv[]) {
 
     for (std::vector<pedsim_msgs::LineObstacle>::iterator it = linesAllObs.begin(); it != linesAllObs.end(); ++it) {
 	allObs.obstacles.push_back(*it);
+	allObs.header = createMsgHeader();
     }
 
     pedsim_msgs::AgentStates allAgents;
+    allAgents.header = createMsgHeader();
     pedsim_msgs::AgentState listOfAgents[5];
 
     for (int i = 0; i < 5; i++){
 	pedsim_msgs::AgentState currAgent;
+	currAgent.header = createMsgHeader();
 	currAgent.id = i;
 	unsigned int id = i;
 	unsigned int type = 0;
@@ -188,16 +200,16 @@ int main(int argc, char *argv[]) {
 	currAgent.pose = agentPose;
 	currAgent.twist = twist;
 	currAgent.forces = force; 
-//	listOfAgents[i] = currAgent;
-//	allAgents.agent_states[i] = listOfAgents[i];
 	allAgents.agent_states.push_back(currAgent);
     }
 	
 
     pedsim_msgs::AgentGroups allGroups;
+    allGroups.header = createMsgHeader();
     pedsim_msgs::AgentGroup listOfGroups[1];
 
     pedsim_msgs::AgentGroup group0;
+    group0.header = createMsgHeader();
     group0.group_id = 0;
     group0.age = 0;
     unsigned int peds[5];
@@ -227,6 +239,7 @@ int main(int argc, char *argv[]) {
     allGroups.groups.push_back(group0);
 
     pedsim_msgs::TrackedPersons allPeds;
+    allPeds.header = createMsgHeader();
     pedsim_msgs::TrackedPerson allTracks[5];
     std::vector<pedsim_msgs::TrackedPerson> tracks;
 
@@ -257,8 +270,9 @@ int main(int argc, char *argv[]) {
 	allTracks[i] = peep;
         allPeds.tracks.push_back(allTracks[i]);
     } 
-
+/*
     pedsim_msgs::TrackedGroups tkdGroups;    
+    tkdGroups.header = createMsgHeader();
     pedsim_msgs::TrackedGroup listOfTkdGroups[1];
 
     pedsim_msgs::TrackedGroup grp;
@@ -287,7 +301,7 @@ int main(int argc, char *argv[]) {
     grp.track_ids = group0.members;
 	
     tkdGroups.groups.push_back(grp);
-
+*/
     // Hard code a robot position
     nav_msgs::Odometry pos;
     geometry_msgs::PoseWithCovariance botPose;
@@ -320,12 +334,12 @@ int main(int argc, char *argv[]) {
     simpleTwist.angular = v;
     botTwist.twist = simpleTwist;
 
-   string frame = "CURRBOT"; 
    pos.child_frame_id = frame;
    pos.pose = botPose;
    pos.twist = botTwist;
 
    pedsim_msgs::Waypoints allWaypoints;
+   allWaypoints.header = createMsgHeader();
    pedsim_msgs::Waypoint pt;
 
    string name = "ALLWAYPOINTS"; 
@@ -336,32 +350,32 @@ int main(int argc, char *argv[]) {
    allWaypoints.waypoints.push_back(pt);
 
     ros::Publisher pub_obstacles_ = 
-        nh.advertise<pedsim_msgs::LineObstacles>("simulated_walls", 1);
+        nh.advertise<pedsim_msgs::LineObstacles>("/pedsim_simulator/simulated_walls", 1);
     ros::Publisher pub_agent_states_ =
-	nh.advertise<pedsim_msgs::AgentStates>("simulated_agents", 1);
+	nh.advertise<pedsim_msgs::AgentStates>("/pedsim_simulator/simulated_agents", 1);
     ros::Publisher pub_agent_groups_ = 
-	nh.advertise<pedsim_msgs::AgentGroups>("simulated_groups", 1);
-    ros::Publisher pub_robot_position_ =
-	nh.advertise<nav_msgs::Odometry>("robot_position", 1);
+	nh.advertise<pedsim_msgs::AgentGroups>("/pedsim_simulator/simulated_groups", 1);
+//   ros::Publisher pub_robot_position_ =
+//	nh.advertise<nav_msgs::Odometry>("/pedsim_simulator/robot_position", 1);
     ros::Publisher pub_waypoints_ =
-	nh.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", 1);
+	nh.advertise<pedsim_msgs::Waypoints>("/pedsim_simulator/simulated_waypoints", 1);
 
 
     while (ros::ok()){
 
-	// Not needed: 
-	// ros::spinOnce();
-	
 	pub_obstacles_.publish(allObs);
+
 	pub_agent_states_.publish(allAgents);
 	pub_agent_groups_.publish(allGroups);
-	pub_robot_position_.publish(pos);
+//	pub_robot_position_.publish(pos);
 	pub_waypoints_.publish(allWaypoints);
+	
+
 	// pub_robot_position_.publish(); // No data atm
 	// pub_waypoints_.publish(); 
 	// No data atm => can try to use pedsim_original to configure waypoints, 
 	// such as how they are used at the beginning of this file
-//	ros::spinOnce();
+	ros::spinOnce();
     }
    
     // Move all agents for 700 steps (and write their position through the outputwriter)

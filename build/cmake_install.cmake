@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/clairechen/pedsim_workspace/build/gtest/cmake_install.cmake")
   include("/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_ros/cmake_install.cmake")
+  include("/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original/cmake_install.cmake")
   include("/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim/cmake_install.cmake")
   include("/home/clairechen/pedsim_workspace/build/pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/cmake_install.cmake")
   include("/home/clairechen/pedsim_workspace/build/pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/cmake_install.cmake")

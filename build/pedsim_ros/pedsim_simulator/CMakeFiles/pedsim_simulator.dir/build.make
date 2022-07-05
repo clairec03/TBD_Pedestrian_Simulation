@@ -166,18 +166,18 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/pedsim_simulator_aut
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pedsim_simulator.dir/pedsim_simulator_autogen/mocs_compilation.cpp.s"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/pedsim_simulator_autogen/mocs_compilation.cpp -o CMakeFiles/pedsim_simulator.dir/pedsim_simulator_autogen/mocs_compilation.cpp.s
 
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o: /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/simulator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o -c /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/simulator.cpp
+pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
+pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o: /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o"
+	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o -c /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp
 
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.i"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/simulator.cpp > CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.i
+pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pedsim_simulator.dir/src/example01.cpp.i"
+	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp > CMakeFiles/pedsim_simulator.dir/src/example01.cpp.i
 
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.s"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/simulator.cpp -o CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.s
+pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pedsim_simulator.dir/src/example01.cpp.s"
+	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp -o CMakeFiles/pedsim_simulator.dir/src/example01.cpp.s
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/scene.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/scene.cpp.o: /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/scene.cpp
@@ -517,22 +517,9 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pedsim_simulator.dir/src/waypointplanner/groupwaypointplanner.cpp.s"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/groupwaypointplanner.cpp -o CMakeFiles/pedsim_simulator.dir/src/waypointplanner/groupwaypointplanner.cpp.s
 
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o: /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o -c /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp
-
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pedsim_simulator.dir/src/example01.cpp.i"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp > CMakeFiles/pedsim_simulator.dir/src/example01.cpp.i
-
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pedsim_simulator.dir/src/example01.cpp.s"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp -o CMakeFiles/pedsim_simulator.dir/src/example01.cpp.s
-
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/moc_config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/moc_config.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.i: cmake_force
@@ -545,7 +532,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/moc_scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/moc_scene.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.i: cmake_force
@@ -558,7 +545,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/moc_agentstatemachine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/moc_agentstatemachine.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.i: cmake_force
@@ -571,7 +558,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_scenarioelement.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_scenarioelement.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_scenarioelement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_scenarioelement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_scenarioelement.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_scenarioelement.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_scenarioelement.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_scenarioelement.cpp.i: cmake_force
@@ -584,7 +571,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agent.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agent.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_agent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agent.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agent.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_agent.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agent.cpp.i: cmake_force
@@ -597,7 +584,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentcluster.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentcluster.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_agentcluster.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentcluster.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentcluster.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentcluster.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_agentcluster.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentcluster.cpp.i: cmake_force
@@ -610,7 +597,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentgroup.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentgroup.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_agentgroup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentgroup.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentgroup.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentgroup.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_agentgroup.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_agentgroup.cpp.i: cmake_force
@@ -623,7 +610,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_attractionarea.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_attractionarea.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_attractionarea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_attractionarea.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_attractionarea.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_attractionarea.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_attractionarea.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_attractionarea.cpp.i: cmake_force
@@ -636,7 +623,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_obstacle.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_obstacle.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_obstacle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_obstacle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_obstacle.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_obstacle.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_obstacle.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_obstacle.cpp.i: cmake_force
@@ -649,7 +636,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waypoint.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waypoint.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_waypoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waypoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waypoint.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waypoint.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_waypoint.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waypoint.cpp.i: cmake_force
@@ -662,7 +649,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_areawaypoint.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_areawaypoint.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_areawaypoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_areawaypoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_areawaypoint.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_areawaypoint.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_areawaypoint.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_areawaypoint.cpp.i: cmake_force
@@ -675,7 +662,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waitingqueue.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waitingqueue.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_waitingqueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waitingqueue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waitingqueue.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waitingqueue.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_waitingqueue.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_waitingqueue.cpp.i: cmake_force
@@ -688,7 +675,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_queueingwaypoint.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_queueingwaypoint.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_queueingwaypoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_queueingwaypoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_queueingwaypoint.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_queueingwaypoint.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/moc_queueingwaypoint.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/element/moc_queueingwaypoint.cpp.i: cmake_force
@@ -701,7 +688,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_force.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_force.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_force.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_force.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_force.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_force.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_force.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_force.cpp.i: cmake_force
@@ -714,7 +701,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_randomforce.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_randomforce.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_randomforce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_randomforce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_randomforce.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_randomforce.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_randomforce.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_randomforce.cpp.i: cmake_force
@@ -727,7 +714,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupgazeforce.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupgazeforce.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_groupgazeforce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupgazeforce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupgazeforce.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupgazeforce.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_groupgazeforce.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupgazeforce.cpp.i: cmake_force
@@ -740,7 +727,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_groupcoherenceforce.cpp.i: cmake_force
@@ -753,7 +740,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_grouprepulsionforce.cpp.i: cmake_force
@@ -766,7 +753,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_alongwallforce.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_alongwallforce.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_alongwallforce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_alongwallforce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_alongwallforce.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_alongwallforce.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/moc_alongwallforce.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/force/moc_alongwallforce.cpp.i: cmake_force
@@ -779,7 +766,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_waypointplanner.cpp.i: cmake_force
@@ -792,7 +779,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_individualwaypointplanner.cpp.i: cmake_force
@@ -805,7 +792,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_groupwaypointplanner.cpp.i: cmake_force
@@ -818,7 +805,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_shoppingplanner.cpp.i: cmake_force
@@ -831,7 +818,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp.o: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/flags.make
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp.o: pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp.o"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp.o -c /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp
 
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/waypointplanner/moc_queueingplanner.cpp.i: cmake_force
@@ -845,7 +832,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simul
 # Object files for target pedsim_simulator
 pedsim_simulator_OBJECTS = \
 "CMakeFiles/pedsim_simulator.dir/pedsim_simulator_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o" \
+"CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/src/scene.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/src/config.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/src/agentstatemachine.cpp.o" \
@@ -872,7 +859,6 @@ pedsim_simulator_OBJECTS = \
 "CMakeFiles/pedsim_simulator.dir/src/waypointplanner/queueingplanner.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/src/waypointplanner/shoppingplanner.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/src/waypointplanner/groupwaypointplanner.cpp.o" \
-"CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o" \
 "CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o" \
@@ -902,7 +888,7 @@ pedsim_simulator_OBJECTS = \
 pedsim_simulator_EXTERNAL_OBJECTS =
 
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/pedsim_simulator_autogen/mocs_compilation.cpp.o
-/home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o
+/home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/scene.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/config.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/agentstatemachine.cpp.o
@@ -929,7 +915,6 @@ pedsim_simulator_EXTERNAL_OBJECTS =
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/queueingplanner.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/shoppingplanner.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/groupwaypointplanner.cpp.o
-/home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_config.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_scene.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/include/pedsim_simulator/moc_agentstatemachine.cpp.o
@@ -981,11 +966,11 @@ pedsim_simulator_EXTERNAL_OBJECTS =
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: ~/pedsim/libpedsim/libpedsim.so
+/home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Linking CXX executable /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Linking CXX executable /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pedsim_simulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

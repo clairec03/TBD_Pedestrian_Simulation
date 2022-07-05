@@ -51,7 +51,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/rng.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/rng.cpp.o"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/scenarioreader.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/scenarioreader.cpp.o"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/scene.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/scene.cpp.o"
-  "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/simulator.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/groupwaypointplanner.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/groupwaypointplanner.cpp.o"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/individualwaypointplanner.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/individualwaypointplanner.cpp.o"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/queueingplanner.cpp" "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/waypointplanner/queueingplanner.cpp.o"
@@ -77,10 +76,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/clairechen/pedsim_workspace/devel/include"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim/include"
+  "/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/include"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_utils/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/clairechen/pedsim/libpedsim"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
@@ -92,6 +91,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/DependInfo.cmake"
   "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_utils/CMakeFiles/pedsim_utils.dir/DependInfo.cmake"
+  "/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

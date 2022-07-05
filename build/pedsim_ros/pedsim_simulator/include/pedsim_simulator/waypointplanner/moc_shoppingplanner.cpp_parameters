@@ -2,6 +2,7 @@
 -I/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include
 -I/home/clairechen/pedsim_workspace/devel/include
 -I/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim/include
+-I/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/include
 -I/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_utils/include
 -I/opt/ros/noetic/include
 -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp

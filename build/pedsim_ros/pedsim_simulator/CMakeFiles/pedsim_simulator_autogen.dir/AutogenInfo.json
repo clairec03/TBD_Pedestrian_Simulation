@@ -31,10 +31,10 @@
 		"/home/clairechen/pedsim_workspace/devel/include",
 		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include",
 		"/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim/include",
+		"/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/include",
 		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_utils/include",
 		"/opt/ros/noetic/include",
 		"/opt/ros/noetic/include/xmlrpcpp",
-		"/home/clairechen/pedsim/libpedsim",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -183,10 +183,6 @@
 		],
 		[
 			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/scene.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/simulator.cpp",
 			"MU"
 		],
 		[

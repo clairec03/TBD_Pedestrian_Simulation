@@ -335,13 +335,13 @@ void SimVisualizer::setupPublishersAndSubscribers() {
     nh_.advertise<visualization_msgs::MarkerArray>("waypoints", 1);
 
   // TODO - get simulator node name by param.
-  sub_states_ = nh_.subscribe("/new_simulator/simulated_agents", 1,
+  sub_states_ = nh_.subscribe("/pedsim_simulator/simulated_agents", 1,
                               &SimVisualizer::agentStatesCallBack, this);
-  sub_obstacles_ = nh_.subscribe("/new_simulator/simulated_walls", 1,
+  sub_obstacles_ = nh_.subscribe("/pedsim_simulator/simulated_walls", 1,
                                  &SimVisualizer::obstaclesCallBack, this);
-  sub_groups_ = nh_.subscribe("/new_simulator/simulated_groups", 1,
+  sub_groups_ = nh_.subscribe("/pedsim_simulator/simulated_groups", 1,
                               &SimVisualizer::agentGroupsCallBack, this);
-  sub_waypoints_ = nh_.subscribe("/new_simulator/simulated_waypoints", 1,
+  sub_waypoints_ = nh_.subscribe("/pedsim_simulator/simulated_waypoints", 1,
                               &SimVisualizer::waypointsCallBack, this);
 }
 

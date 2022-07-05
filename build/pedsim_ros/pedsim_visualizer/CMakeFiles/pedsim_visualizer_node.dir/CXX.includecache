@@ -454,10 +454,6 @@ pedsim_visualizer/sim_visualizer.h
 pedsim_utils/geometry.h
 -
 
-/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/src/sim_visualizer_node.cpp
-pedsim_visualizer/sim_visualizer.h
--
-
 /opt/ros/noetic/include/dynamic_reconfigure/BoolParameter.h
 string
 -

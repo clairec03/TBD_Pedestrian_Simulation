@@ -51,7 +51,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/pedsim_simulator.dir/src/rng.cpp.o"
   "CMakeFiles/pedsim_simulator.dir/src/scenarioreader.cpp.o"
   "CMakeFiles/pedsim_simulator.dir/src/scene.cpp.o"
-  "CMakeFiles/pedsim_simulator.dir/src/simulator.cpp.o"
   "CMakeFiles/pedsim_simulator.dir/src/waypointplanner/groupwaypointplanner.cpp.o"
   "CMakeFiles/pedsim_simulator.dir/src/waypointplanner/individualwaypointplanner.cpp.o"
   "CMakeFiles/pedsim_simulator.dir/src/waypointplanner/queueingplanner.cpp.o"
