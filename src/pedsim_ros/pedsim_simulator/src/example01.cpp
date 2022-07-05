@@ -7,24 +7,22 @@
 #include <thread>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string>
+#include <cstring>
 
 #include <ros/ros.h>
 
 /*
-#include <pedsim/ped_agent.h>
-#include <pedsim/ped_obstacle.h>
-#include <pedsim/ped_waypoint.h>
-#include <pedsim/ped_scene.h> 
+#include <libpedsim_original/ped_agent.h>
+#include <libpedsim_original/ped_obstacle.h>
+#include <libpedsim_original/ped_waypoint.h>
+#include <libpedsim_original/ped_scene.h>
 */
 
-//#include "ped_include.h"
-
-#include "ped_agent.h"
-#include "ped_obstacle.h"
-#include "ped_waypoint.h"
-#include "ped_scene.h"
-
-//#include <pedsim_simulator/simulator.h>
+#include "../../3rdparty/libpedsim_original/include/ped_agent.h"
+#include "../../3rdparty/libpedsim_original/include/ped_obstacle.h"
+#include "../../3rdparty/libpedsim_original/include/ped_waypoint.h"
+#include "../../3rdparty/libpedsim_original/include/ped_scene.h"
 
 #include <pedsim_msgs/AgentForce.h>
 #include <pedsim_msgs/AgentGroup.h>
@@ -47,6 +45,7 @@
 #include <nav_msgs/Odometry.h>
 #include <std_msgs/Header.h>
 #include <std_srvs/Empty.h>
+#include <vector>
 
 #include <QApplication>
 
@@ -73,7 +72,7 @@ int main(int argc, char *argv[]) {
     Ped::Tobstacle *o = new Ped::Tobstacle(0, -50,  0, +50);
     pedscene->addObstacle(o);
 
-    for (int i = 0; i<10; i++) {
+    /* for (int i = 0; i<10; i++) {
         Ped::Tagent *a = new Ped::Tagent();
 
         a->addWaypoint(w1);
@@ -82,12 +81,12 @@ int main(int argc, char *argv[]) {
         a->setPosition(-50 + rand()/(RAND_MAX/80)-40, 0 + rand()/(RAND_MAX/20) -10, 0);
 
         pedscene->addAgent(a);
-    }
+    } */
 
+    ros::init(argc, argv, "pedsim_simulator");
     ros::NodeHandle nh;
 
     pedsim_msgs::LineObstacles allObs;
-    //pedsim_msgs::LineObstacle[] array = new pedsim_msgs::LineObstacle[2];
     pedsim_msgs::LineObstacle array[2];
 
     for (int i = 0; i < 2; i++) {
@@ -103,10 +102,15 @@ int main(int argc, char *argv[]) {
 	obs.start = start;
 	obs.end = end;
 	array[i] = obs;
-	allObs.obstacles[i] = array[i];
+//	allObs.obstacles.push_back(obs);
+//	allObs.obstacles[i] = array[i];
     }
 
-    //allObs.obstacles = array;
+    std::vector<pedsim_msgs::LineObstacle> linesAllObs (array, array + sizeof(array) / sizeof(pedsim_msgs::LineObstacle));
+
+    for (std::vector<pedsim_msgs::LineObstacle>::iterator it = linesAllObs.begin(); it != linesAllObs.end(); ++it) {
+	allObs.obstacles.push_back(*it);
+    }
 
     pedsim_msgs::AgentStates allAgents;
     pedsim_msgs::AgentState listOfAgents[5];
@@ -184,11 +188,11 @@ int main(int argc, char *argv[]) {
 	currAgent.pose = agentPose;
 	currAgent.twist = twist;
 	currAgent.forces = force; 
-	listOfAgents[i] = currAgent;
-	allAgents.agent_states[i] = listOfAgents[i];
+//	listOfAgents[i] = currAgent;
+//	allAgents.agent_states[i] = listOfAgents[i];
+	allAgents.agent_states.push_back(currAgent);
     }
 	
-    //allAgents.agent_states = listOfAgents;
 
     pedsim_msgs::AgentGroups allGroups;
     pedsim_msgs::AgentGroup listOfGroups[1];
@@ -219,10 +223,12 @@ int main(int argc, char *argv[]) {
 
     group0.center_of_mass = center;
     listOfGroups[0] = group0;
-    allGroups.groups[0] = listOfGroups[0];
+ //   allGroups.groups[0] = listOfGroups[0];
+    allGroups.groups.push_back(group0);
 
     pedsim_msgs::TrackedPersons allPeds;
     pedsim_msgs::TrackedPerson allTracks[5];
+    std::vector<pedsim_msgs::TrackedPerson> tracks;
 
     // Constant zero covariance matrix
     double covar[36];
@@ -249,11 +255,9 @@ int main(int argc, char *argv[]) {
 	peep.pose = poseWithCovar;
 	peep.twist = twistWithCovar;
 	allTracks[i] = peep;
-        allPeds.tracks[i] = allTracks[i];
+        allPeds.tracks.push_back(allTracks[i]);
     } 
 
-    //allPeds.tracks = allTracks;
-    
     pedsim_msgs::TrackedGroups tkdGroups;    
     pedsim_msgs::TrackedGroup listOfTkdGroups[1];
 
@@ -276,15 +280,60 @@ int main(int argc, char *argv[]) {
     groupPose.orientation = grpOrientn; 
     groupPoseWithCovar.pose = groupPose;
     for (int i = 0; i < 36; i++) {
-    	groupPoseWithCovar.covariance[i] = covar[i];
+  	groupPoseWithCovar.covariance[i] = covar[i];
     }
 
     grp.centerOfGravity = groupPoseWithCovar;
     grp.track_ids = group0.members;
 	
-    listOfTkdGroups[0] = grp;
-    tkdGroups.groups[0] = listOfTkdGroups[0];
-    
+    tkdGroups.groups.push_back(grp);
+
+    // Hard code a robot position
+    nav_msgs::Odometry pos;
+    geometry_msgs::PoseWithCovariance botPose;
+    geometry_msgs::Pose p;
+    geometry_msgs::Point botPoint;
+    botPoint.x = 0;
+    botPoint.y = 0;
+    botPoint.z = 0;
+    p.position = botPoint;
+    geometry_msgs::Quaternion q;
+    q.x = 0;
+    q.y = 0;
+    q.z = 0;
+    q.w = 0;
+    p.orientation = q;
+    botPose.pose = p;
+    geometry_msgs::TwistWithCovariance botTwist;
+    for (int i = 0; i < 36; i++) {
+//    botPose.covariance.push_back(covar[i]);
+//    botTwist.covariance.push_back(covar[i]);
+	botPose.covariance[i] = covar[i];
+	botTwist.covariance[i] = covar[i];
+    }
+    geometry_msgs::Twist simpleTwist;
+    geometry_msgs::Vector3 v;
+    v.x = 0;
+    v.y = 0;
+    v.z = 0;
+    simpleTwist.linear = v;
+    simpleTwist.angular = v;
+    botTwist.twist = simpleTwist;
+
+   string frame = "CURRBOT"; 
+   pos.child_frame_id = frame;
+   pos.pose = botPose;
+   pos.twist = botTwist;
+
+   pedsim_msgs::Waypoints allWaypoints;
+   pedsim_msgs::Waypoint pt;
+
+   string name = "ALLWAYPOINTS"; 
+   pt.name = name;
+   pt.behavior = 0;
+   pt.position = botPoint; // which is (0, 0, 0)
+   pt.radius = 1;
+   allWaypoints.waypoints.push_back(pt);
 
     ros::Publisher pub_obstacles_ = 
         nh.advertise<pedsim_msgs::LineObstacles>("simulated_walls", 1);
@@ -297,14 +346,22 @@ int main(int argc, char *argv[]) {
     ros::Publisher pub_waypoints_ =
 	nh.advertise<pedsim_msgs::Waypoints>("simulated_waypoints", 1);
 
+
     while (ros::ok()){
-    	pub_obstacles_.publish(allObs);
-	pub_agent_states_.publish(allAgents);
-//	pub_robot_position_.publish();
-//	pub_waypoints_.publish();
 
 	// Not needed: 
 	// ros::spinOnce();
+	
+	pub_obstacles_.publish(allObs);
+	pub_agent_states_.publish(allAgents);
+	pub_agent_groups_.publish(allGroups);
+	pub_robot_position_.publish(pos);
+	pub_waypoints_.publish(allWaypoints);
+	// pub_robot_position_.publish(); // No data atm
+	// pub_waypoints_.publish(); 
+	// No data atm => can try to use pedsim_original to configure waypoints, 
+	// such as how they are used at the beginning of this file
+//	ros::spinOnce();
     }
    
     // Move all agents for 700 steps (and write their position through the outputwriter)
