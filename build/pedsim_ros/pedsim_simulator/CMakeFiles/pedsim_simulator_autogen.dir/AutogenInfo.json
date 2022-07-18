@@ -61,33 +61,7 @@
 	],
 	"MOC_PREDEFS_FILE" : "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/pedsim_simulator_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : 
-	[
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/agentstatemachine.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/config.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/agent.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/agentcluster.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/agentgroup.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/areawaypoint.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/attractionarea.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/obstacle.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/queueingwaypoint.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/scenarioelement.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/waitingqueue.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/element/waypoint.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/alongwallforce.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/force.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/groupcoherenceforce.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/groupgazeforce.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/grouprepulsionforce.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/force/randomforce.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/scene.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/groupwaypointplanner.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/individualwaypointplanner.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/queueingplanner.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/shoppingplanner.h",
-		"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include/pedsim_simulator/waypointplanner/waypointplanner.h"
-	],
+	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
 	"PARSE_CACHE_FILE" : "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/ParseCache.txt",
@@ -98,111 +72,7 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/agentstatemachine.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/config.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/agent.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/agentcluster.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/agentgroup.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/areawaypoint.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/attractionarea.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/obstacle.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/queueingwaypoint.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/scenarioelement.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/waitingqueue.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/element/waypoint.cpp",
-			"MU"
-		],
-		[
 			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/example01.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/force/alongwallforce.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/force/force.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/force/groupcoherenceforce.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/force/groupgazeforce.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/force/grouprepulsionforce.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/force/randomforce.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/rng.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/scenarioreader.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/scene.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/groupwaypointplanner.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/individualwaypointplanner.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/queueingplanner.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/shoppingplanner.cpp",
-			"MU"
-		],
-		[
-			"/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/src/waypointplanner/waypointplanner.cpp",
 			"MU"
 		]
 	],

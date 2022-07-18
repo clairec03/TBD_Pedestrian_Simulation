@@ -23,6 +23,8 @@
 #include "../../3rdparty/libpedsim_original/include/ped_obstacle.h"
 #include "../../3rdparty/libpedsim_original/include/ped_waypoint.h"
 #include "../../3rdparty/libpedsim_original/include/ped_scene.h"
+#include "../../3rdparty/libpedsim_original/include/ped_includes.h"
+#include "../../3rdparty/libpedsim_original/include/ped_outputwriter.h"
 
 #include <pedsim_msgs/AgentForce.h>
 #include <pedsim_msgs/AgentGroup.h>
@@ -64,69 +66,107 @@ int main(int argc, char *argv[]) {
 
     ros::Duration one_sec(1.0);
 
+    printf("Executing line %d\n", __LINE__);
     // create an output writer which will send output to a file 
-//    Ped::OutputWriter *ow = new Ped::FileOutputWriter();
-//    ow->setScenarioName("Example 01");
+    Ped::OutputWriter *ow = new Ped::FileOutputWriter();
+    ow->setScenarioName("Example 01");
 
-    //cout << "PedSim Example using libpedsim version " << Ped::LIBPEDSIM_VERSION << endl;
+    cout << "PedSim Example using libpedsim version " << Ped::LIBPEDSIM_VERSION << endl;
 
+    printf("Executing line %d\n", __LINE__);
     // Setup
     Ped::Tscene *pedscene = new Ped::Tscene(-200, -200, 400, 400);
 
-//    pedscene->setOutputWriter(ow);
+    printf("Executing line %d\n", __LINE__);
+    // pedscene->setOutputWriter(ow); // SEGFAULTS
 
+    printf("Executing line %d\n", __LINE__);
     Ped::Twaypoint *w1 = new Ped::Twaypoint(-100, 0, 24);
     Ped::Twaypoint *w2 = new Ped::Twaypoint(+100, 0, 12);
 
-    Ped::Tobstacle *o = new Ped::Tobstacle(0, -50,  0, +50);
-    pedscene->addObstacle(o);
+    printf("Executing line %d\n", __LINE__);
 
-    /* for (int i = 0; i<10; i++) {
+    // args to Ped::Tobstacle()
+    // 1. x coordinate of the first corner of the obstacle.
+    // 2. y coordinate of the first corner of the obstacle.
+    // 3. x coordinate of the second corner of the obstacle.
+    // 4. y coordinate of the second corner of the obstacle.
+    Ped::Tobstacle *o1 = new Ped::Tobstacle(0, 0,  -2, -2);
+    Ped::Tobstacle *o2 = new Ped::Tobstacle(3, -3,  5, -5);
+    pedscene->addObstacle(o1);
+    pedscene->addObstacle(o2);
+
+    printf("Executing line %d\n", __LINE__);
+    for (int i = 0; i<10; i++) {
+	printf("On iteration %d\n", i);
+    	printf("Executing line %d\n", __LINE__);
         Ped::Tagent *a = new Ped::Tagent();
 
-        a->addWaypoint(w1);
-        a->addWaypoint(w2);
+    	printf("Executing line %d\n", __LINE__);
+	printf("Tagent a is %p\n", (void *) a);
+        // a->addWaypoint(w1); // SEGFAULTS
+        // a->addWaypoint(w2); // SEGFAULTS
 
-        a->setPosition(-50 + rand()/(RAND_MAX/80)-40, 0 + rand()/(RAND_MAX/20) -10, 0);
-
+    	printf("Executing line %d\n", __LINE__);
+//        a->setPosition(-50 + rand()/(RAND_MAX/80)-40, 0 + rand()/(RAND_MAX/20) -10, 0);
+	a->setPosition(i, i, 0);
+    	printf("Executing line %d\n", __LINE__);
         pedscene->addAgent(a);
-    } */
 
+    	printf("Executing line %d\n", __LINE__);
+
+    }
+
+    printf("Executing line %d\n", __LINE__);
     ros::init(argc, argv, "pedsim_simulator");
     ros::NodeHandle nh;
 
+    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::LineObstacles allObs;
     pedsim_msgs::LineObstacle array[2];
 
+    printf("Executing line %d\n", __LINE__);
+//    std::vector<Ped::Tobstacle *> obs = pedscene->getAllObstacles();
+//    for (std::vector<Ped::Tobstacle *>::iterator it = obs.begin(); it != obs.end(); ++it) {
     for (int i = 0; i < 2; i++) {
+	printf("On iteration %d\n", i);
 	pedsim_msgs::LineObstacle obs;
+
+    	printf("Executing line %d\n", __LINE__);
     	geometry_msgs::Point start;
-	start.x = 0;
-	start.y = 0;
+	start.x = -i;
+	start.y = -i;
 	start.z = 0;
+	
+    	printf("Executing line %d\n", __LINE__);
     	geometry_msgs::Point end;
-	end.x = i;
-	end.y = i;
-	end.z = i;
+	end.x = -i+1;
+	end.y = -i+1;
+	end.z = 0;
 	obs.start = start;
 	obs.end = end;
 	array[i] = obs;
-//	allObs.obstacles.push_back(obs);
-//	allObs.obstacles[i] = array[i];
+
     }
 
+
+    printf("Executing line %d\n", __LINE__);
     std::vector<pedsim_msgs::LineObstacle> linesAllObs (array, array + sizeof(array) / sizeof(pedsim_msgs::LineObstacle));
 
+    printf("Executing line %d\n", __LINE__);
     for (std::vector<pedsim_msgs::LineObstacle>::iterator it = linesAllObs.begin(); it != linesAllObs.end(); ++it) {
 	allObs.obstacles.push_back(*it);
-	allObs.header = createMsgHeader();
     }
+    printf("Executing line %d\n", __LINE__);
+    allObs.header = createMsgHeader();
 
+    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::AgentStates allAgents;
     allAgents.header = createMsgHeader();
     pedsim_msgs::AgentState listOfAgents[5];
 
-    for (int i = 0; i < 5; i++){
+    printf("Executing line %d\n", __LINE__);
+    for (int i = 0; i < 10; i++){
 	pedsim_msgs::AgentState currAgent;
 	currAgent.header = createMsgHeader();
 	currAgent.id = i;
@@ -203,26 +243,31 @@ int main(int argc, char *argv[]) {
 	allAgents.agent_states.push_back(currAgent);
     }
 	
+    printf("Executing line %d\n", __LINE__);
 
     pedsim_msgs::AgentGroups allGroups;
     allGroups.header = createMsgHeader();
     pedsim_msgs::AgentGroup listOfGroups[1];
 
+    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::AgentGroup group0;
     group0.header = createMsgHeader();
     group0.group_id = 0;
     group0.age = 0;
     unsigned int peds[5];
    
+    printf("Executing line %d\n", __LINE__);
     for (int i = 0; i < 5; i++) {
 	pedsim_msgs::AgentState agent = listOfAgents[i];
 	peds[i] = agent.id;
     }
 
+    printf("Executing line %d\n", __LINE__);
     geometry_msgs::Pose center;
     geometry_msgs::Point ctrPos;
     geometry_msgs::Quaternion ctrOrientn;
 
+    printf("Executing line %d\n", __LINE__);
     ctrPos.x = 0;
     ctrPos.y = 0;
     ctrPos.z = 0;
@@ -233,22 +278,26 @@ int main(int argc, char *argv[]) {
     center.position = ctrPos;
     center.orientation = ctrOrientn;
 
+    printf("Executing line %d\n", __LINE__);
     group0.center_of_mass = center;
     listOfGroups[0] = group0;
  //   allGroups.groups[0] = listOfGroups[0];
     allGroups.groups.push_back(group0);
 
+    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::TrackedPersons allPeds;
     allPeds.header = createMsgHeader();
     pedsim_msgs::TrackedPerson allTracks[5];
     std::vector<pedsim_msgs::TrackedPerson> tracks;
 
+    printf("Executing line %d\n", __LINE__);
     // Constant zero covariance matrix
     double covar[36];
     for (int i = 0; i < 36; i++) {
         covar[i] = 0;
     }
 	
+    printf("Executing line %d\n", __LINE__);
     for (pedsim_msgs::AgentState agent : listOfAgents) {
 	unsigned int i = agent.id;
 	pedsim_msgs::TrackedPerson peep;
@@ -270,38 +319,7 @@ int main(int argc, char *argv[]) {
 	allTracks[i] = peep;
         allPeds.tracks.push_back(allTracks[i]);
     } 
-/*
-    pedsim_msgs::TrackedGroups tkdGroups;    
-    tkdGroups.header = createMsgHeader();
-    pedsim_msgs::TrackedGroup listOfTkdGroups[1];
-
-    pedsim_msgs::TrackedGroup grp;
-    grp.group_id = group0.group_id; 
-    grp.age = one_sec;
-
-    geometry_msgs::PoseWithCovariance groupPoseWithCovar;    
-    geometry_msgs::Pose groupPose;
-    geometry_msgs::Point groupPt;
-    groupPt.x = 2;
-    groupPt.y = 2;
-    groupPt.z = 2;
-    geometry_msgs::Quaternion grpOrientn;
-    grpOrientn.x = 0;
-    grpOrientn.y = 0;
-    grpOrientn.z = 0;
-    grpOrientn.w = 0;
-    groupPose.position = groupPt;
-    groupPose.orientation = grpOrientn; 
-    groupPoseWithCovar.pose = groupPose;
-    for (int i = 0; i < 36; i++) {
-  	groupPoseWithCovar.covariance[i] = covar[i];
-    }
-
-    grp.centerOfGravity = groupPoseWithCovar;
-    grp.track_ids = group0.members;
-	
-    tkdGroups.groups.push_back(grp);
-*/
+    printf("Executing line %d\n", __LINE__);
     // Hard code a robot position
     nav_msgs::Odometry pos;
     geometry_msgs::PoseWithCovariance botPose;
@@ -325,6 +343,7 @@ int main(int argc, char *argv[]) {
 	botPose.covariance[i] = covar[i];
 	botTwist.covariance[i] = covar[i];
     }
+    printf("Executing line %d\n", __LINE__);
     geometry_msgs::Twist simpleTwist;
     geometry_msgs::Vector3 v;
     v.x = 0;
@@ -334,14 +353,17 @@ int main(int argc, char *argv[]) {
     simpleTwist.angular = v;
     botTwist.twist = simpleTwist;
 
+    printf("Executing line %d\n", __LINE__);
    pos.child_frame_id = frame;
    pos.pose = botPose;
    pos.twist = botTwist;
 
+    printf("Executing line %d\n", __LINE__);
    pedsim_msgs::Waypoints allWaypoints;
    allWaypoints.header = createMsgHeader();
    pedsim_msgs::Waypoint pt;
 
+    printf("Executing line %d\n", __LINE__);
    string name = "ALLWAYPOINTS"; 
    pt.name = name;
    pt.behavior = 0;
@@ -349,6 +371,7 @@ int main(int argc, char *argv[]) {
    pt.radius = 1;
    allWaypoints.waypoints.push_back(pt);
 
+    printf("Executing line %d\n", __LINE__);
     ros::Publisher pub_obstacles_ = 
         nh.advertise<pedsim_msgs::LineObstacles>("/pedsim_simulator/simulated_walls", 1);
     ros::Publisher pub_agent_states_ =
@@ -360,10 +383,20 @@ int main(int argc, char *argv[]) {
     ros::Publisher pub_waypoints_ =
 	nh.advertise<pedsim_msgs::Waypoints>("/pedsim_simulator/simulated_waypoints", 1);
 
+    printf("Executing line %d\n", __LINE__);
 
-    while (ros::ok()){
-
+    // Move all agents for 700 steps (and write their position through the outputwriter)
+    for (int i=0; i<700; ++i) {
+	printf("On iteration %d\n", i);
 	pub_obstacles_.publish(allObs);
+        // pedscene->moveAgents(0.3);
+	std::this_thread::sleep_for(std::chrono::milliseconds(3));
+    }
+    printf("Executing line %d\n", __LINE__);
+
+    while (ros::ok()) {
+
+//	pub_obstacles_.publish(allObs);
 
 	pub_agent_states_.publish(allAgents);
 	pub_agent_groups_.publish(allGroups);
@@ -378,18 +411,13 @@ int main(int argc, char *argv[]) {
 	ros::spinOnce();
     }
    
-    // Move all agents for 700 steps (and write their position through the outputwriter)
-    for (int i=0; i<700; ++i) {
-        pedscene->moveAgents(0.3);
-	std::this_thread::sleep_for(std::chrono::milliseconds(3));
-    }
-
     // Cleanup
     for (Ped::Tagent* agent : pedscene->getAllAgents()) delete agent;
     delete pedscene;
     delete w1;
     delete w2;
-    delete o;
+    delete o1;
+    delete o2;
 //    delete ow;
 
 
