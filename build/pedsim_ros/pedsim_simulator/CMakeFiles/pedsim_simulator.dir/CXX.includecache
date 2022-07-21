@@ -345,14 +345,6 @@ assert.h
 -
 ros/ros.h
 -
-libpedsim_original/ped_agent.h
--
-libpedsim_original/ped_obstacle.h
--
-libpedsim_original/ped_waypoint.h
--
-libpedsim_original/ped_scene.h
--
 ../../3rdparty/libpedsim_original/include/ped_agent.h
 /home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/include/ped_agent.h
 ../../3rdparty/libpedsim_original/include/ped_obstacle.h
