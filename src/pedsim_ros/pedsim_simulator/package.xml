@@ -20,7 +20,6 @@
 
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
-  <build_depend>pedsim</build_depend>
   <build_depend>libpedsim_original</build_depend>
   <build_depend>pedsim_msgs</build_depend>
   <build_depend>pedsim_srvs</build_depend>
@@ -37,7 +36,6 @@
   <run_depend>tf</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
-  <run_depend>pedsim</run_depend>
   <run_depend>libpedsim_original</run_depend>
   <run_depend>pedsim_msgs</run_depend>
   <run_depend>pedsim_srvs</run_depend>

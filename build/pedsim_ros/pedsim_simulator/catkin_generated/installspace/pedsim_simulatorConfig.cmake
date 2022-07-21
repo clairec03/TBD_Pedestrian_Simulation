@@ -185,7 +185,7 @@ foreach(t ${pedsim_simulator_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;rospy;std_msgs;pedsim;libpedsim_original;pedsim_msgs;pedsim_srvs;pedsim_utils;std_srvs;geometry_msgs;nav_msgs;tf;cmake_modules;dynamic_reconfigure")
+set(depends "roscpp;rospy;std_msgs;libpedsim_original;pedsim_msgs;pedsim_srvs;pedsim_utils;std_srvs;geometry_msgs;nav_msgs;tf;cmake_modules;dynamic_reconfigure")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

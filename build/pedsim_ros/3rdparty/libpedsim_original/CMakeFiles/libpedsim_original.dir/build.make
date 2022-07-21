@@ -135,19 +135,6 @@ pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libpedsim_original.dir/src/ped_waypoint.cpp.s"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/src/ped_waypoint.cpp -o CMakeFiles/libpedsim_original.dir/src/ped_waypoint.cpp.s
 
-pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/flags.make
-pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o: /home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/src/ped_outputwriter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o -c /home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/src/ped_outputwriter.cpp
-
-pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.i"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/src/ped_outputwriter.cpp > CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.i
-
-pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.s"
-	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/src/ped_outputwriter.cpp -o CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.s
-
 # Object files for target libpedsim_original
 libpedsim_original_OBJECTS = \
 "CMakeFiles/libpedsim_original.dir/src/ped_agent.cpp.o" \
@@ -155,8 +142,7 @@ libpedsim_original_OBJECTS = \
 "CMakeFiles/libpedsim_original.dir/src/ped_scene.cpp.o" \
 "CMakeFiles/libpedsim_original.dir/src/ped_tree.cpp.o" \
 "CMakeFiles/libpedsim_original.dir/src/ped_vector.cpp.o" \
-"CMakeFiles/libpedsim_original.dir/src/ped_waypoint.cpp.o" \
-"CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o"
+"CMakeFiles/libpedsim_original.dir/src/ped_waypoint.cpp.o"
 
 # External object files for target libpedsim_original
 libpedsim_original_EXTERNAL_OBJECTS =
@@ -167,10 +153,9 @@ libpedsim_original_EXTERNAL_OBJECTS =
 /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_tree.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_vector.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_waypoint.cpp.o
-/home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build.make
 /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library /home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so"
 	cd /home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libpedsim_original.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

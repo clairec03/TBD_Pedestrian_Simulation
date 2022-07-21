@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include <string>
 #include <cstring>
+#include <assert.h>
 
 #include <ros/ros.h>
 
@@ -24,7 +25,7 @@
 #include "../../3rdparty/libpedsim_original/include/ped_waypoint.h"
 #include "../../3rdparty/libpedsim_original/include/ped_scene.h"
 #include "../../3rdparty/libpedsim_original/include/ped_includes.h"
-#include "../../3rdparty/libpedsim_original/include/ped_outputwriter.h"
+// #include "../../3rdparty/libpedsim_original/include/ped_outputwriter.h"
 
 #include <pedsim_msgs/AgentForce.h>
 #include <pedsim_msgs/AgentGroup.h>
@@ -66,25 +67,20 @@ int main(int argc, char *argv[]) {
 
     ros::Duration one_sec(1.0);
 
-    printf("Executing line %d\n", __LINE__);
     // create an output writer which will send output to a file 
-    Ped::OutputWriter *ow = new Ped::FileOutputWriter();
-    ow->setScenarioName("Example 01");
+//    Ped::OutputWriter *ow = new Ped::FileOutputWriter();
+//    ow->setScenarioName("Example 01");
 
     cout << "PedSim Example using libpedsim version " << Ped::LIBPEDSIM_VERSION << endl;
 
-    printf("Executing line %d\n", __LINE__);
     // Setup
     Ped::Tscene *pedscene = new Ped::Tscene(-200, -200, 400, 400);
 
-    printf("Executing line %d\n", __LINE__);
     // pedscene->setOutputWriter(ow); // SEGFAULTS
 
-    printf("Executing line %d\n", __LINE__);
     Ped::Twaypoint *w1 = new Ped::Twaypoint(-100, 0, 24);
     Ped::Twaypoint *w2 = new Ped::Twaypoint(+100, 0, 12);
 
-    printf("Executing line %d\n", __LINE__);
 
     // args to Ped::Tobstacle()
     // 1. x coordinate of the first corner of the obstacle.
@@ -96,52 +92,44 @@ int main(int argc, char *argv[]) {
     pedscene->addObstacle(o1);
     pedscene->addObstacle(o2);
 
-    printf("Executing line %d\n", __LINE__);
     for (int i = 0; i<10; i++) {
-	printf("On iteration %d\n", i);
-    	printf("Executing line %d\n", __LINE__);
         Ped::Tagent *a = new Ped::Tagent();
-
-    	printf("Executing line %d\n", __LINE__);
-	printf("Tagent a is %p\n", (void *) a);
-        // a->addWaypoint(w1); // SEGFAULTS
-        // a->addWaypoint(w2); // SEGFAULTS
-
-    	printf("Executing line %d\n", __LINE__);
-//        a->setPosition(-50 + rand()/(RAND_MAX/80)-40, 0 + rand()/(RAND_MAX/20) -10, 0);
-	a->setPosition(i, i, 0);
-    	printf("Executing line %d\n", __LINE__);
+        a->addWaypoint(w1); 
+        a->addWaypoint(w2); 
+        //a->setPosition(-50 + rand()/(RAND_MAX/80)-40, 0 + rand()/(RAND_MAX/20) -10, 0);
+        a->setPosition(i + rand()/(RAND_MAX/15), i + rand()/(RAND_MAX/15), 0);
+//	a->setfactorsocialforce(1.0);
+//	a->setfactordesiredforce(0.2);
+//	a->setPosition(i, i, 0);
         pedscene->addAgent(a);
-
-    	printf("Executing line %d\n", __LINE__);
+	printf("ORIGINALLY, agent %p has id of %d\n", (void *)a, a->getid());
+//	Ped::Tvector aPos = a->getPosition();
+//	printf("Agent %d's position is currently %f, %f, %f\n", a->getid(), aPos.x, aPos.y, aPos.z);
+//	a->move(0.2);
+//	Ped::Tvector aPrimePos = a->getPosition();
+//	printf("Agent %d's position after moving %f, %f, %f\n", a->getid(), aPrimePos.x, aPrimePos.y, aPrimePos.z);
 
     }
-
-    printf("Executing line %d\n", __LINE__);
+    
     ros::init(argc, argv, "pedsim_simulator");
     ros::NodeHandle nh;
 
-    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::LineObstacles allObs;
     pedsim_msgs::LineObstacle array[2];
 
-    printf("Executing line %d\n", __LINE__);
 //    std::vector<Ped::Tobstacle *> obs = pedscene->getAllObstacles();
 //    for (std::vector<Ped::Tobstacle *>::iterator it = obs.begin(); it != obs.end(); ++it) {
     for (int i = 0; i < 2; i++) {
-	printf("On iteration %d\n", i);
 	pedsim_msgs::LineObstacle obs;
 
-    	printf("Executing line %d\n", __LINE__);
     	geometry_msgs::Point start;
-	start.x = -i;
-	start.y = -i;
+	start.x = 10 * i;
+	start.y = 10 * i;
 	start.z = 0;
 	
-    	printf("Executing line %d\n", __LINE__);
     	geometry_msgs::Point end;
-	end.x = -i+1;
-	end.y = -i+1;
+	end.x = 10 * i;
+	end.y = 10 * i;
 	end.z = 0;
 	obs.start = start;
 	obs.end = end;
@@ -149,37 +137,31 @@ int main(int argc, char *argv[]) {
 
     }
 
-
-    printf("Executing line %d\n", __LINE__);
     std::vector<pedsim_msgs::LineObstacle> linesAllObs (array, array + sizeof(array) / sizeof(pedsim_msgs::LineObstacle));
 
-    printf("Executing line %d\n", __LINE__);
     for (std::vector<pedsim_msgs::LineObstacle>::iterator it = linesAllObs.begin(); it != linesAllObs.end(); ++it) {
 	allObs.obstacles.push_back(*it);
     }
-    printf("Executing line %d\n", __LINE__);
     allObs.header = createMsgHeader();
 
-    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::AgentStates allAgents;
+    pedsim_msgs::AgentState listOfAgents[10];
     allAgents.header = createMsgHeader();
-    pedsim_msgs::AgentState listOfAgents[5];
-
-    printf("Executing line %d\n", __LINE__);
-    for (int i = 0; i < 10; i++){
+    
+    for (Ped::Tagent *pedAgent : pedscene->getAllAgents()) {
 	pedsim_msgs::AgentState currAgent;
 	currAgent.header = createMsgHeader();
-	currAgent.id = i;
-	unsigned int id = i;
+	currAgent.id = pedAgent->getid();
 	unsigned int type = 0;
 	currAgent.type = type;
 	string state = "individual_moving";
 	currAgent.social_state = state;
 	geometry_msgs::Pose agentPose;
 	geometry_msgs::Point posingPt;
-	posingPt.x = i;
-	posingPt.y = i;
-	posingPt.z = i;
+	Ped::Tvector pos = pedAgent->getPosition();
+	posingPt.x = pos.x;
+	posingPt.y = pos.y;
+	posingPt.z = pos.z;
 	geometry_msgs::Quaternion quat;
 	quat.x = 0;
 	quat.y = 0;
@@ -241,33 +223,22 @@ int main(int argc, char *argv[]) {
 	currAgent.twist = twist;
 	currAgent.forces = force; 
 	allAgents.agent_states.push_back(currAgent);
-    }
-	
-    printf("Executing line %d\n", __LINE__);
 
+    }
+    
     pedsim_msgs::AgentGroups allGroups;
     allGroups.header = createMsgHeader();
     pedsim_msgs::AgentGroup listOfGroups[1];
 
-    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::AgentGroup group0;
     group0.header = createMsgHeader();
     group0.group_id = 0;
     group0.age = 0;
-    unsigned int peds[5];
    
-    printf("Executing line %d\n", __LINE__);
-    for (int i = 0; i < 5; i++) {
-	pedsim_msgs::AgentState agent = listOfAgents[i];
-	peds[i] = agent.id;
-    }
-
-    printf("Executing line %d\n", __LINE__);
     geometry_msgs::Pose center;
     geometry_msgs::Point ctrPos;
     geometry_msgs::Quaternion ctrOrientn;
 
-    printf("Executing line %d\n", __LINE__);
     ctrPos.x = 0;
     ctrPos.y = 0;
     ctrPos.z = 0;
@@ -278,26 +249,25 @@ int main(int argc, char *argv[]) {
     center.position = ctrPos;
     center.orientation = ctrOrientn;
 
-    printf("Executing line %d\n", __LINE__);
     group0.center_of_mass = center;
     listOfGroups[0] = group0;
  //   allGroups.groups[0] = listOfGroups[0];
     allGroups.groups.push_back(group0);
 
-    printf("Executing line %d\n", __LINE__);
     pedsim_msgs::TrackedPersons allPeds;
     allPeds.header = createMsgHeader();
     pedsim_msgs::TrackedPerson allTracks[5];
     std::vector<pedsim_msgs::TrackedPerson> tracks;
 
-    printf("Executing line %d\n", __LINE__);
     // Constant zero covariance matrix
     double covar[36];
     for (int i = 0; i < 36; i++) {
-        covar[i] = 0;
+	int row = i / 6;
+	int col = i % 6;
+        if (row == col) covar[i] = 1;
+	else covar[i] = 0;
     }
 	
-    printf("Executing line %d\n", __LINE__);
     for (pedsim_msgs::AgentState agent : listOfAgents) {
 	unsigned int i = agent.id;
 	pedsim_msgs::TrackedPerson peep;
@@ -319,7 +289,6 @@ int main(int argc, char *argv[]) {
 	allTracks[i] = peep;
         allPeds.tracks.push_back(allTracks[i]);
     } 
-    printf("Executing line %d\n", __LINE__);
     // Hard code a robot position
     nav_msgs::Odometry pos;
     geometry_msgs::PoseWithCovariance botPose;
@@ -338,12 +307,9 @@ int main(int argc, char *argv[]) {
     botPose.pose = p;
     geometry_msgs::TwistWithCovariance botTwist;
     for (int i = 0; i < 36; i++) {
-//    botPose.covariance.push_back(covar[i]);
-//    botTwist.covariance.push_back(covar[i]);
 	botPose.covariance[i] = covar[i];
 	botTwist.covariance[i] = covar[i];
     }
-    printf("Executing line %d\n", __LINE__);
     geometry_msgs::Twist simpleTwist;
     geometry_msgs::Vector3 v;
     v.x = 0;
@@ -353,25 +319,33 @@ int main(int argc, char *argv[]) {
     simpleTwist.angular = v;
     botTwist.twist = simpleTwist;
 
-    printf("Executing line %d\n", __LINE__);
-   pos.child_frame_id = frame;
-   pos.pose = botPose;
-   pos.twist = botTwist;
+    pos.child_frame_id = frame;
+    pos.pose = botPose;
+    pos.twist = botTwist;
 
-    printf("Executing line %d\n", __LINE__);
-   pedsim_msgs::Waypoints allWaypoints;
-   allWaypoints.header = createMsgHeader();
-   pedsim_msgs::Waypoint pt;
+    pedsim_msgs::Waypoints allWaypoints;
+    allWaypoints.header = createMsgHeader();
 
-    printf("Executing line %d\n", __LINE__);
-   string name = "ALLWAYPOINTS"; 
-   pt.name = name;
-   pt.behavior = 0;
-   pt.position = botPoint; // which is (0, 0, 0)
-   pt.radius = 1;
-   allWaypoints.waypoints.push_back(pt);
+   
+    std::vector<Ped::Twaypoint *> pedWps = pedscene->getAllWaypoints();
+    int wCount = 0;
+    for (std::vector<Ped::Twaypoint *>::iterator pedWp = std::begin(pedWps); pedWp != std::end(pedWps);
+        ++pedWp) {
+        pedsim_msgs::Waypoint wp;
+	geometry_msgs::Point pt;
+   	string name = "Waypoint"; 
+	wp.name = name;
+  	wp.behavior = 0;
+   	wp.radius = 1;
+ 
+	pt.x = (*pedWp)->getx();
+	pt.y = (*pedWp)->gety();
+	pt.z = 0;
+	wp.position = pt;
+	allWaypoints.waypoints.push_back(wp);
+	wCount++;
+    }
 
-    printf("Executing line %d\n", __LINE__);
     ros::Publisher pub_obstacles_ = 
         nh.advertise<pedsim_msgs::LineObstacles>("/pedsim_simulator/simulated_walls", 1);
     ros::Publisher pub_agent_states_ =
@@ -383,25 +357,73 @@ int main(int argc, char *argv[]) {
     ros::Publisher pub_waypoints_ =
 	nh.advertise<pedsim_msgs::Waypoints>("/pedsim_simulator/simulated_waypoints", 1);
 
-    printf("Executing line %d\n", __LINE__);
-
     // Move all agents for 700 steps (and write their position through the outputwriter)
+ 
     for (int i=0; i<700; ++i) {
-	printf("On iteration %d\n", i);
+//	printf("On iteration %d\n", i);
 	pub_obstacles_.publish(allObs);
-        // pedscene->moveAgents(0.3);
-	std::this_thread::sleep_for(std::chrono::milliseconds(3));
+	pub_agent_states_.publish(allAgents);
+	pub_agent_groups_.publish(allGroups);
+	pub_waypoints_.publish(allWaypoints);
+
+        pedscene->moveAgents(0.2);
+//    	printf("Outer loop %d: Executing line %d\n", i,__LINE__);
+    	std::vector<Ped::Tagent *> pedAgents = pedscene->getAllAgents();
+	int count = 0;
+	for (std::vector<Ped::Tagent *>::iterator pedAgent = std::begin(pedAgents); pedAgent != std::end(pedAgents);
+	     ++pedAgent) {
+		int id = (*pedAgent)->getid();
+ //  		printf("	Inner loop %d: Executing line %d\n", count, __LINE__);
+		pedsim_msgs::AgentState currAgent = (allAgents.agent_states)[id];
+    	//	printf("Successfully indexed into allAgents.agent_states\n");
+    	//	printf("Executing line %d\n", __LINE__);
+		//printf("Agent %d current location is %f, %f, %f\n", , aPos.y, aPos.z);	
+		geometry_msgs::Pose agentPose = currAgent.pose;
+		geometry_msgs::Point oldPos = agentPose.position;
+		Ped::Tvector newPos = (*pedAgent)->getPosition();
+		oldPos.x = newPos.x;
+		oldPos.y = newPos.y;
+		oldPos.z = newPos.z;
+		agentPose.position = oldPos;
+		currAgent.pose = agentPose;
+		count++;
+		(allAgents.agent_states)[id] = currAgent;
+		/*
+		if (i < 10) {
+		printf("Iteration %d, %d: This agent is %p with id %d\n", i, count, (void *)(*pedAgent), (*pedAgent)->getid());
+		printf("Iteration %d, %d: pedsim_ros agent has id %ld\n", i, count, currAgent.id);
+		printf("\n");
+		}
+		*/
+//		printf("Iteration %d, %d: This agent is %p with id %d\n", i, count, (void *)(*pedAgent), (*pedAgent)->getid());
+//		printf("Iteration %d, %d: pedsim_ros agent has id %ld\n", i, count, currAgent.id);
+//		printf("\n");
+//		assert((unsigned long)(*pedAgent)->getid() == currAgent.id);
+		/*
+		if (id = 2) {
+			Ped::Tvector apos = (*pedAgent)->getPosition();
+			printf("agent pos: %f, %f, %fs\n", apos.x, apos.y, apos.z);
+			geometry_msgs::Pose poseCheck = currAgent.pose;
+			geometry_msgs::Point pointCheck = poseCheck.position;
+			printf("updated pedsim_ros pos: %f, %f, %f\n", pointCheck.x, pointCheck.y, pointCheck.z);
+		}
+		*/
+
+	}
+
+	// Iterate through allAgents as declared, and simultaneously iterate through all agents
+	// in the scene, updating the position of each agent in allAgents	
+		
+//	}
+	std::this_thread::sleep_for(std::chrono::milliseconds(20));
     }
-    printf("Executing line %d\n", __LINE__);
 
     while (ros::ok()) {
 
 //	pub_obstacles_.publish(allObs);
 
-	pub_agent_states_.publish(allAgents);
-	pub_agent_groups_.publish(allGroups);
 //	pub_robot_position_.publish(pos);
-	pub_waypoints_.publish(allWaypoints);
+//	pub_waypoints_.publish(allWaypoints);
 	
 
 	// pub_robot_position_.publish(); // No data atm

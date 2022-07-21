@@ -461,33 +461,6 @@ src/ped_obstacle.cpp.s:
 	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_obstacle.cpp.s
 .PHONY : src/ped_obstacle.cpp.s
 
-src/ped_outputwriter.o: src/ped_outputwriter.cpp.o
-
-.PHONY : src/ped_outputwriter.o
-
-# target to build an object file
-src/ped_outputwriter.cpp.o:
-	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o
-.PHONY : src/ped_outputwriter.cpp.o
-
-src/ped_outputwriter.i: src/ped_outputwriter.cpp.i
-
-.PHONY : src/ped_outputwriter.i
-
-# target to preprocess a source file
-src/ped_outputwriter.cpp.i:
-	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.i
-.PHONY : src/ped_outputwriter.cpp.i
-
-src/ped_outputwriter.s: src/ped_outputwriter.cpp.s
-
-.PHONY : src/ped_outputwriter.s
-
-# target to generate assembly for a file
-src/ped_outputwriter.cpp.s:
-	cd /home/clairechen/pedsim_workspace/build && $(MAKE) -f pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/build.make pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.s
-.PHONY : src/ped_outputwriter.cpp.s
-
 src/ped_scene.o: src/ped_scene.cpp.o
 
 .PHONY : src/ped_scene.o
@@ -631,9 +604,6 @@ help:
 	@echo "... src/ped_obstacle.o"
 	@echo "... src/ped_obstacle.i"
 	@echo "... src/ped_obstacle.s"
-	@echo "... src/ped_outputwriter.o"
-	@echo "... src/ped_outputwriter.i"
-	@echo "... src/ped_outputwriter.s"
 	@echo "... src/ped_scene.o"
 	@echo "... src/ped_scene.i"
 	@echo "... src/ped_scene.s"

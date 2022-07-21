@@ -25,7 +25,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "pedsim_ros/pedsim_simulator/pedsim_simulator_autogen/include"
   "/home/clairechen/pedsim_workspace/devel/include"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_simulator/include"
-  "/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim/include"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/3rdparty/libpedsim_original/include"
   "/home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_utils/include"
   "/opt/ros/noetic/include"
@@ -39,7 +38,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/DependInfo.cmake"
   "/home/clairechen/pedsim_workspace/build/pedsim_ros/pedsim_utils/CMakeFiles/pedsim_utils.dir/DependInfo.cmake"
   "/home/clairechen/pedsim_workspace/build/pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/libpedsim_original.dir/DependInfo.cmake"
   )

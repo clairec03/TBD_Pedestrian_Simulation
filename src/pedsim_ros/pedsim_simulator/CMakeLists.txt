@@ -5,7 +5,6 @@ set(PEDSIM_SIMULATOR_DEPENDENCIES
   roscpp
   rospy
   std_msgs
-  pedsim
   libpedsim_original
   pedsim_msgs
   pedsim_srvs

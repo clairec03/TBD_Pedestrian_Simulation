@@ -62,8 +62,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "pedsim_ros/pedsim_visualizer/catkin_generated/package.cmake"
   "/home/clairechen/pedsim_workspace/devel/share/libpedsim_original/cmake/libpedsim_originalConfig-version.cmake"
   "/home/clairechen/pedsim_workspace/devel/share/libpedsim_original/cmake/libpedsim_originalConfig.cmake"
-  "/home/clairechen/pedsim_workspace/devel/share/pedsim/cmake/pedsimConfig-version.cmake"
-  "/home/clairechen/pedsim_workspace/devel/share/pedsim/cmake/pedsimConfig.cmake"
   "/home/clairechen/pedsim_workspace/devel/share/pedsim_msgs/cmake/pedsim_msgs-msg-extras.cmake"
   "/home/clairechen/pedsim_workspace/devel/share/pedsim_msgs/cmake/pedsim_msgs-msg-paths.cmake"
   "/home/clairechen/pedsim_workspace/devel/share/pedsim_msgs/cmake/pedsim_msgsConfig-version.cmake"

@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "/home/clairechen/pedsim_workspace/devel/lib/liblibpedsim_original.so"
   "CMakeFiles/libpedsim_original.dir/src/ped_agent.cpp.o"
   "CMakeFiles/libpedsim_original.dir/src/ped_obstacle.cpp.o"
-  "CMakeFiles/libpedsim_original.dir/src/ped_outputwriter.cpp.o"
   "CMakeFiles/libpedsim_original.dir/src/ped_scene.cpp.o"
   "CMakeFiles/libpedsim_original.dir/src/ped_tree.cpp.o"
   "CMakeFiles/libpedsim_original.dir/src/ped_vector.cpp.o"

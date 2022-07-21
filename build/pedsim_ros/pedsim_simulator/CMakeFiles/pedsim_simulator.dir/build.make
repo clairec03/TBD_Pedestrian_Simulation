@@ -95,7 +95,6 @@ pedsim_simulator_EXTERNAL_OBJECTS =
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/src/example01.cpp.o
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/build.make
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
-/home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /home/clairechen/pedsim_workspace/devel/lib/libpedsim.so
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /home/clairechen/pedsim_workspace/devel/lib/libpedsim_utils.so
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /opt/ros/noetic/lib/libtf.so
 /home/clairechen/pedsim_workspace/devel/lib/pedsim_simulator/pedsim_simulator: /opt/ros/noetic/lib/libtf2_ros.so

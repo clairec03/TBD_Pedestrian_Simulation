@@ -1391,7 +1391,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spe
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_genpy.dir/rule
@@ -1449,7 +1449,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spe
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages.dir/rule
@@ -1756,12 +1756,12 @@ pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spe
 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/_spencer_human_attribute_msgs_generate_messages_check_deps_CategoricalAttribute.dir/all
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=54,55 "Built target spencer_human_attribute_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=54 "Built target spencer_human_attribute_msgs_generate_messages_py"
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_human_attribute_msgs/CMakeFiles/spencer_human_attribute_msgs_generate_messages_py.dir/rule
@@ -1937,12 +1937,12 @@ pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tr
 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/_spencer_tracking_msgs_generate_messages_check_deps_TrackingTimingMetrics.dir/all
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=67,68,69,70,71 "Built target spencer_tracking_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=67,68,69,70 "Built target spencer_tracking_msgs_generate_messages_eus"
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_eus.dir/rule
@@ -2333,12 +2333,12 @@ pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tr
 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/_spencer_tracking_msgs_generate_messages_check_deps_TrackingTimingMetrics.dir/all
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=72,73,74,75 "Built target spencer_tracking_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=71,72,73,74,75 "Built target spencer_tracking_msgs_generate_messages_lisp"
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_generate_messages_lisp.dir/rule
@@ -2596,7 +2596,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tr
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_geneus.dir/rule
@@ -2623,7 +2623,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tr
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/spencer_tracking_msgs_genlisp.dir/rule
@@ -2692,12 +2692,12 @@ pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/all: peds
 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/all: pedsim_ros/pedsim_msgs/CMakeFiles/_pedsim_msgs_generate_messages_check_deps_SocialRelations.dir/all
 	$(MAKE) -f pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/build.make pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/build.make pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=31,32,33,34,35 "Built target pedsim_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=30,31,32,33,34,35 "Built target pedsim_msgs_generate_messages_py"
 .PHONY : pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_py.dir/rule
@@ -2980,7 +2980,7 @@ pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_genpy.dir/all: pedsim_ros/pedsim_m
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_genpy.dir/rule
@@ -3162,7 +3162,7 @@ pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_gennodejs.dir/all: pedsim_ros/peds
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_gennodejs.dir/rule
@@ -3258,12 +3258,12 @@ pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/all: 
 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/all: pedsim_ros/pedsim_msgs/CMakeFiles/_pedsim_msgs_generate_messages_check_deps_SocialRelations.dir/all
 	$(MAKE) -f pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=25,26,27,28,29,30 "Built target pedsim_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=25,26,27,28,29 "Built target pedsim_msgs_generate_messages_nodejs"
 .PHONY : pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_msgs/CMakeFiles/pedsim_msgs_generate_messages_nodejs.dir/rule
@@ -3942,7 +3942,7 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genpy.dir/all: pedsim_ros/pedsim_s
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genpy.dir/rule
@@ -3974,7 +3974,7 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_py.dir/all: peds
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_py.dir/rule
@@ -4118,7 +4118,7 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_geneus.dir/all: pedsim_ros/pedsim_
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_geneus.dir/rule
@@ -4199,12 +4199,12 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/all: ped
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/all: pedsim_ros/pedsim_srvs/CMakeFiles/_pedsim_srvs_generate_messages_check_deps_GetAllAgentsState.dir/all
 	$(MAKE) -f pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/build.make pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/depend
 	$(MAKE) -f pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/build.make pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=41,42 "Built target pedsim_srvs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=41 "Built target pedsim_srvs_generate_messages_eus"
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_eus.dir/rule
@@ -4258,12 +4258,12 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/all: pe
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/all: pedsim_ros/pedsim_srvs/CMakeFiles/_pedsim_srvs_generate_messages_check_deps_GetAllAgentsState.dir/all
 	$(MAKE) -f pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/build.make pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/depend
 	$(MAKE) -f pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/build.make pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=43 "Built target pedsim_srvs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=42,43 "Built target pedsim_srvs_generate_messages_lisp"
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_lisp.dir/rule
@@ -4290,7 +4290,7 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genlisp.dir/all: pedsim_ros/pedsim
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_genlisp.dir/rule
@@ -4322,7 +4322,7 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_nodejs.dir/all: 
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_generate_messages_nodejs.dir/rule
@@ -4349,7 +4349,7 @@ pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_gennodejs.dir/all: pedsim_ros/peds
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_srvs/CMakeFiles/pedsim_srvs_gennodejs.dir/rule
@@ -4876,7 +4876,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages.dir/rule
@@ -4966,12 +4966,12 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/_spencer_social_relation_msgs_generate_messages_check_deps_SocialRelation.dir/all
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=56 "Built target spencer_social_relation_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=55,56 "Built target spencer_social_relation_msgs_generate_messages_cpp"
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_cpp.dir/rule
@@ -5052,7 +5052,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_gencpp.dir/rule
@@ -5081,12 +5081,12 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/_spencer_social_relation_msgs_generate_messages_check_deps_SocialRelation.dir/all
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=60 "Built target spencer_social_relation_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=59,60 "Built target spencer_social_relation_msgs_generate_messages_nodejs"
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_nodejs.dir/rule
@@ -5201,7 +5201,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_gennodejs.dir/rule
@@ -5230,12 +5230,12 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/_spencer_social_relation_msgs_generate_messages_check_deps_SocialRelation.dir/all
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/build.make pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=58,59 "Built target spencer_social_relation_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=58 "Built target spencer_social_relation_msgs_generate_messages_lisp"
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_generate_messages_lisp.dir/rule
@@ -5262,7 +5262,7 @@ pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spe
 
 # Build rule for subdir invocation for target.
 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/2ndparty/spencer_messages/spencer_social_relation_msgs/CMakeFiles/spencer_social_relation_msgs_genlisp.dir/rule
@@ -6719,12 +6719,12 @@ pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/all: pedsim_ros
 pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/all: pedsim_ros/pedsim_gazebo_plugin/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/build.make pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/depend
 	$(MAKE) -f pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/build.make pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=37 "Built target pedsim_occlusion_sensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num= "Built target pedsim_occlusion_sensor"
 .PHONY : pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_occlusion_sensor.dir/rule
@@ -6883,12 +6883,12 @@ pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/all: pedsim_ros/pe
 pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/all: pedsim_ros/pedsim_gazebo_plugin/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/build.make pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/depend
 	$(MAKE) -f pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/build.make pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num= "Built target pedsim_people_sensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clairechen/pedsim_workspace/build/CMakeFiles --progress-num=37 "Built target pedsim_people_sensor"
 .PHONY : pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_sensors/CMakeFiles/pedsim_people_sensor.dir/rule
@@ -6923,7 +6923,6 @@ pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
@@ -6989,7 +6988,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all: pedsim
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 41
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot.dir/rule
@@ -7024,7 +7023,6 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/3rdp
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
@@ -7091,7 +7089,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all: pedsim_ros/peds
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 42
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 39
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator.dir/rule
@@ -7153,7 +7151,6 @@ pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
@@ -7218,7 +7215,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 37
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/simulate_diff_drive_robot_autogen.dir/rule
@@ -7252,7 +7249,6 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/3rdparty/libpedsim_original/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/3rdparty/libpedsim/CMakeFiles/pedsim.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_ros/2ndparty/spencer_messages/spencer_tracking_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
@@ -7318,7 +7314,7 @@ pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all: pedsim_
 
 # Build rule for subdir invocation for target.
 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 39
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clairechen/pedsim_workspace/build/CMakeFiles 0
 .PHONY : pedsim_ros/pedsim_simulator/CMakeFiles/pedsim_simulator_autogen.dir/rule
