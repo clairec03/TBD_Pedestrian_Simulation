@@ -9,7 +9,8 @@ import rospy
 from gazebo_msgs.srv import SpawnModel
 from geometry_msgs.msg import *
 from rospkg import RosPack
-from pedsim_msgs.msg  import AgentStates
+# from pedsim_msgs.msg import AgentStates
+from pedsim_msgs.msg import * 
 
 # xml file containing a gazebo model to represent agent, currently is represented by a cubic but can be changed
 global xml_file

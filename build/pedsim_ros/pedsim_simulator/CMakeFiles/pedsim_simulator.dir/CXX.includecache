@@ -341,8 +341,6 @@ string
 -
 cstring
 -
-assert.h
--
 ros/ros.h
 -
 ../../3rdparty/libpedsim_original/include/ped_agent.h
