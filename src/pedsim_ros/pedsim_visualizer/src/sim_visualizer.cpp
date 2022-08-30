@@ -325,12 +325,16 @@ void SimVisualizer::publishWaypointVisuals() {
 void SimVisualizer::setupPublishersAndSubscribers() {
   pub_obstacles_visuals_ =
       nh_.advertise<visualization_msgs::Marker>("walls", 1, true);
+/*
   pub_person_visuals_ =
       nh_.advertise<pedsim_msgs::TrackedPersons>("tracked_persons", 1);
+*/
+  pub_person_visuals_ =
+      nh_.advertise<spencer_tracking_msgs::TrackedPersons>("tracked_persons", 1);
   pub_group_visuals_ =
-      nh_.advertise<pedsim_msgs::TrackedGroups>("tracked_groups", 1);
+      nh_.advertise<spencer_tracking_msgs::TrackedGroups>("tracked_groups", 1);
   pub_forces_ =
-    nh_.advertise<visualization_msgs::MarkerArray>("forces", 1);
+    nh_.advertise<spencer_tracking_msgs::MarkerArray>("forces", 1);
   pub_waypoints_ =
     nh_.advertise<visualization_msgs::MarkerArray>("waypoints", 1);
 

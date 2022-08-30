@@ -100,7 +100,7 @@
    self)
   )
 
-(setf (get spencer_vision_msgs::PersonROIs :md5sum-) "39d733db5b2ece3bd129f8a360116d23")
+(setf (get spencer_vision_msgs::PersonROIs :md5sum-) "5494785c7ce344707d7018890c22c251")
 (setf (get spencer_vision_msgs::PersonROIs :datatype-) "spencer_vision_msgs/PersonROIs")
 (setf (get spencer_vision_msgs::PersonROIs :definition-)
       "# Message describing an array of rectangular regions of interest in a depth or RGB image containing a part of a person (e.g. head, face, full body...), which is usually encoded in the topic title
@@ -135,6 +135,7 @@ MSG: spencer_vision_msgs/PersonROI
 #
 
 uint64          detection_id
+float64         confidence
 
 sensor_msgs/RegionOfInterest    roi
 
@@ -165,6 +166,6 @@ bool do_rectify
 
 
 
-(provide :spencer_vision_msgs/PersonROIs "39d733db5b2ece3bd129f8a360116d23")
+(provide :spencer_vision_msgs/PersonROIs "5494785c7ce344707d7018890c22c251")
 
 

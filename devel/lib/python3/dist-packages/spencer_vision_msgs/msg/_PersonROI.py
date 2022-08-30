@@ -9,13 +9,14 @@ import struct
 import sensor_msgs.msg
 
 class PersonROI(genpy.Message):
-  _md5sum = "4484c510821bd11dbd7b6b3627d4e4ad"
+  _md5sum = "7f9cc3bd231d52c7402fba914841853a"
   _type = "spencer_vision_msgs/PersonROI"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """# Message describing a rectangular region of interest in a depth or RGB image containing a part of a person (e.g. head, face, full body...), which is usually encoded in the topic title
 #
 
 uint64          detection_id
+float64         confidence
 
 sensor_msgs/RegionOfInterest    roi
 
@@ -42,8 +43,8 @@ uint32 width     # Width of ROI
 # used).
 bool do_rectify
 """
-  __slots__ = ['detection_id','roi']
-  _slot_types = ['uint64','sensor_msgs/RegionOfInterest']
+  __slots__ = ['detection_id','confidence','roi']
+  _slot_types = ['uint64','float64','sensor_msgs/RegionOfInterest']
 
   def __init__(self, *args, **kwds):
     """
@@ -53,7 +54,7 @@ bool do_rectify
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       detection_id,roi
+       detection_id,confidence,roi
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -64,10 +65,13 @@ bool do_rectify
       # message fields cannot be None, assign default values for those that are
       if self.detection_id is None:
         self.detection_id = 0
+      if self.confidence is None:
+        self.confidence = 0.
       if self.roi is None:
         self.roi = sensor_msgs.msg.RegionOfInterest()
     else:
       self.detection_id = 0
+      self.confidence = 0.
       self.roi = sensor_msgs.msg.RegionOfInterest()
 
   def _get_types(self):
@@ -83,7 +87,7 @@ bool do_rectify
     """
     try:
       _x = self
-      buff.write(_get_struct_Q4IB().pack(_x.detection_id, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify))
+      buff.write(_get_struct_Qd4IB().pack(_x.detection_id, _x.confidence, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -100,8 +104,8 @@ bool do_rectify
       end = 0
       _x = self
       start = end
-      end += 25
-      (_x.detection_id, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify,) = _get_struct_Q4IB().unpack(str[start:end])
+      end += 33
+      (_x.detection_id, _x.confidence, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify,) = _get_struct_Qd4IB().unpack(str[start:end])
       self.roi.do_rectify = bool(self.roi.do_rectify)
       return self
     except struct.error as e:
@@ -116,7 +120,7 @@ bool do_rectify
     """
     try:
       _x = self
-      buff.write(_get_struct_Q4IB().pack(_x.detection_id, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify))
+      buff.write(_get_struct_Qd4IB().pack(_x.detection_id, _x.confidence, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -134,8 +138,8 @@ bool do_rectify
       end = 0
       _x = self
       start = end
-      end += 25
-      (_x.detection_id, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify,) = _get_struct_Q4IB().unpack(str[start:end])
+      end += 33
+      (_x.detection_id, _x.confidence, _x.roi.x_offset, _x.roi.y_offset, _x.roi.height, _x.roi.width, _x.roi.do_rectify,) = _get_struct_Qd4IB().unpack(str[start:end])
       self.roi.do_rectify = bool(self.roi.do_rectify)
       return self
     except struct.error as e:
@@ -145,9 +149,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_Q4IB = None
-def _get_struct_Q4IB():
-    global _struct_Q4IB
-    if _struct_Q4IB is None:
-        _struct_Q4IB = struct.Struct("<Q4IB")
-    return _struct_Q4IB
+_struct_Qd4IB = None
+def _get_struct_Qd4IB():
+    global _struct_Qd4IB
+    if _struct_Qd4IB is None:
+        _struct_Qd4IB = struct.Struct("<Qd4IB")
+    return _struct_Qd4IB

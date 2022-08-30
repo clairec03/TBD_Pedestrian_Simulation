@@ -142,12 +142,12 @@ struct MD5Sum< ::spencer_vision_msgs::PersonROIs_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "39d733db5b2ece3bd129f8a360116d23";
+    return "5494785c7ce344707d7018890c22c251";
   }
 
   static const char* value(const ::spencer_vision_msgs::PersonROIs_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x39d733db5b2ece3bULL;
-  static const uint64_t static_value2 = 0xd129f8a360116d23ULL;
+  static const uint64_t static_value1 = 0x5494785c7ce34470ULL;
+  static const uint64_t static_value2 = 0x7d7018890c22c251ULL;
 };
 
 template<class ContainerAllocator>
@@ -198,6 +198,7 @@ struct Definition< ::spencer_vision_msgs::PersonROIs_<ContainerAllocator> >
 "#\n"
 "\n"
 "uint64          detection_id\n"
+"float64         confidence\n"
 "\n"
 "sensor_msgs/RegionOfInterest    roi\n"
 "\n"

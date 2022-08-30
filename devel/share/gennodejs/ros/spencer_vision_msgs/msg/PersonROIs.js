@@ -95,7 +95,7 @@ class PersonROIs {
     length += std_msgs.msg.Header.getMessageSize(object.header);
     length += _getByteLength(object.rgb_topic);
     length += _getByteLength(object.depth_topic);
-    length += 25 * object.elements.length;
+    length += 33 * object.elements.length;
     return length + 12;
   }
 
@@ -106,7 +106,7 @@ class PersonROIs {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '39d733db5b2ece3bd129f8a360116d23';
+    return '5494785c7ce344707d7018890c22c251';
   }
 
   static messageDefinition() {
@@ -144,6 +144,7 @@ class PersonROIs {
     #
     
     uint64          detection_id
+    float64         confidence
     
     sensor_msgs/RegionOfInterest    roi
     

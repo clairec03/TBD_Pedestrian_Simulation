@@ -26,10 +26,12 @@ struct PersonROI_
 
   PersonROI_()
     : detection_id(0)
+    , confidence(0.0)
     , roi()  {
     }
   PersonROI_(const ContainerAllocator& _alloc)
     : detection_id(0)
+    , confidence(0.0)
     , roi(_alloc)  {
   (void)_alloc;
     }
@@ -38,6 +40,9 @@ struct PersonROI_
 
    typedef uint64_t _detection_id_type;
   _detection_id_type detection_id;
+
+   typedef double _confidence_type;
+  _confidence_type confidence;
 
    typedef  ::sensor_msgs::RegionOfInterest_<ContainerAllocator>  _roi_type;
   _roi_type roi;
@@ -72,6 +77,7 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::spencer_vision_msgs::PersonROI_<ContainerAllocator1> & lhs, const ::spencer_vision_msgs::PersonROI_<ContainerAllocator2> & rhs)
 {
   return lhs.detection_id == rhs.detection_id &&
+    lhs.confidence == rhs.confidence &&
     lhs.roi == rhs.roi;
 }
 
@@ -129,12 +135,12 @@ struct MD5Sum< ::spencer_vision_msgs::PersonROI_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "4484c510821bd11dbd7b6b3627d4e4ad";
+    return "7f9cc3bd231d52c7402fba914841853a";
   }
 
   static const char* value(const ::spencer_vision_msgs::PersonROI_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x4484c510821bd11dULL;
-  static const uint64_t static_value2 = 0xbd7b6b3627d4e4adULL;
+  static const uint64_t static_value1 = 0x7f9cc3bd231d52c7ULL;
+  static const uint64_t static_value2 = 0x402fba914841853aULL;
 };
 
 template<class ContainerAllocator>
@@ -157,6 +163,7 @@ struct Definition< ::spencer_vision_msgs::PersonROI_<ContainerAllocator> >
 "#\n"
 "\n"
 "uint64          detection_id\n"
+"float64         confidence\n"
 "\n"
 "sensor_msgs/RegionOfInterest    roi\n"
 "\n"
@@ -201,6 +208,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.detection_id);
+      stream.next(m.confidence);
       stream.next(m.roi);
     }
 
@@ -222,6 +230,8 @@ struct Printer< ::spencer_vision_msgs::PersonROI_<ContainerAllocator> >
   {
     s << indent << "detection_id: ";
     Printer<uint64_t>::stream(s, indent + "  ", v.detection_id);
+    s << indent << "confidence: ";
+    Printer<double>::stream(s, indent + "  ", v.confidence);
     s << indent << "roi: ";
     s << std::endl;
     Printer< ::sensor_msgs::RegionOfInterest_<ContainerAllocator> >::stream(s, indent + "  ", v.roi);

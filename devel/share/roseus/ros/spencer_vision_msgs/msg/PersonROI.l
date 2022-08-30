@@ -16,21 +16,26 @@
 
 (defclass spencer_vision_msgs::PersonROI
   :super ros::object
-  :slots (_detection_id _roi ))
+  :slots (_detection_id _confidence _roi ))
 
 (defmethod spencer_vision_msgs::PersonROI
   (:init
    (&key
     ((:detection_id __detection_id) 0)
+    ((:confidence __confidence) 0.0)
     ((:roi __roi) (instance sensor_msgs::RegionOfInterest :init))
     )
    (send-super :init)
    (setq _detection_id (round __detection_id))
+   (setq _confidence (float __confidence))
    (setq _roi __roi)
    self)
   (:detection_id
    (&optional __detection_id)
    (if __detection_id (setq _detection_id __detection_id)) _detection_id)
+  (:confidence
+   (&optional __confidence)
+   (if __confidence (setq _confidence __confidence)) _confidence)
   (:roi
    (&rest __roi)
    (if (keywordp (car __roi))
@@ -42,6 +47,8 @@
    ()
    (+
     ;; uint64 _detection_id
+    8
+    ;; float64 _confidence
     8
     ;; sensor_msgs/RegionOfInterest _roi
     (send _roi :serialization-length)
@@ -62,6 +69,8 @@
               (write-long (if (>= _detection_id 0) 0 #xffffffff) s))
              (t                                         ;; integer
               (write-long _detection_id s)(write-long (if (>= _detection_id 0) 0 #xffffffff) s)))
+     ;; float64 _confidence
+       (sys::poke _confidence (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
      ;; sensor_msgs/RegionOfInterest _roi
        (send _roi :serialize s)
      ;;
@@ -81,19 +90,22 @@
                       b0)
                     ((= b1  0) (make-instance bignum :size 1 :bv (integer-vector b0)))
                     (t (make-instance bignum :size 2 :bv (integer-vector b0 (ash b1 1)))))))
+   ;; float64 _confidence
+     (setq _confidence (sys::peek buf ptr- :double)) (incf ptr- 8)
    ;; sensor_msgs/RegionOfInterest _roi
      (send _roi :deserialize buf ptr-) (incf ptr- (send _roi :serialization-length))
    ;;
    self)
   )
 
-(setf (get spencer_vision_msgs::PersonROI :md5sum-) "4484c510821bd11dbd7b6b3627d4e4ad")
+(setf (get spencer_vision_msgs::PersonROI :md5sum-) "7f9cc3bd231d52c7402fba914841853a")
 (setf (get spencer_vision_msgs::PersonROI :datatype-) "spencer_vision_msgs/PersonROI")
 (setf (get spencer_vision_msgs::PersonROI :definition-)
       "# Message describing a rectangular region of interest in a depth or RGB image containing a part of a person (e.g. head, face, full body...), which is usually encoded in the topic title
 #
 
 uint64          detection_id
+float64         confidence
 
 sensor_msgs/RegionOfInterest    roi
 
@@ -124,6 +136,6 @@ bool do_rectify
 
 
 
-(provide :spencer_vision_msgs/PersonROI "4484c510821bd11dbd7b6b3627d4e4ad")
+(provide :spencer_vision_msgs/PersonROI "7f9cc3bd231d52c7402fba914841853a")
 
 

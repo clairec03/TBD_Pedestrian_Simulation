@@ -20,6 +20,7 @@ class PersonROI {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.detection_id = null;
+      this.confidence = null;
       this.roi = null;
     }
     else {
@@ -28,6 +29,12 @@ class PersonROI {
       }
       else {
         this.detection_id = 0;
+      }
+      if (initObj.hasOwnProperty('confidence')) {
+        this.confidence = initObj.confidence
+      }
+      else {
+        this.confidence = 0.0;
       }
       if (initObj.hasOwnProperty('roi')) {
         this.roi = initObj.roi
@@ -42,6 +49,8 @@ class PersonROI {
     // Serializes a message object of type PersonROI
     // Serialize message field [detection_id]
     bufferOffset = _serializer.uint64(obj.detection_id, buffer, bufferOffset);
+    // Serialize message field [confidence]
+    bufferOffset = _serializer.float64(obj.confidence, buffer, bufferOffset);
     // Serialize message field [roi]
     bufferOffset = sensor_msgs.msg.RegionOfInterest.serialize(obj.roi, buffer, bufferOffset);
     return bufferOffset;
@@ -53,13 +62,15 @@ class PersonROI {
     let data = new PersonROI(null);
     // Deserialize message field [detection_id]
     data.detection_id = _deserializer.uint64(buffer, bufferOffset);
+    // Deserialize message field [confidence]
+    data.confidence = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [roi]
     data.roi = sensor_msgs.msg.RegionOfInterest.deserialize(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 25;
+    return 33;
   }
 
   static datatype() {
@@ -69,7 +80,7 @@ class PersonROI {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '4484c510821bd11dbd7b6b3627d4e4ad';
+    return '7f9cc3bd231d52c7402fba914841853a';
   }
 
   static messageDefinition() {
@@ -79,6 +90,7 @@ class PersonROI {
     #
     
     uint64          detection_id
+    float64         confidence
     
     sensor_msgs/RegionOfInterest    roi
     
@@ -119,6 +131,13 @@ class PersonROI {
     }
     else {
       resolved.detection_id = 0
+    }
+
+    if (msg.confidence !== undefined) {
+      resolved.confidence = msg.confidence;
+    }
+    else {
+      resolved.confidence = 0.0
     }
 
     if (msg.roi !== undefined) {

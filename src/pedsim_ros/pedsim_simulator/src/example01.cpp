@@ -64,7 +64,7 @@ void setup_covar() {
     for (int i = 0; i < 36; i++) {
 	int row = i / 6;
 	int col = i % 6;
-        if (row == col) covar[i] = 1;
+    if (row == col) covar[i] = 1;
 	else covar[i] = 0;
     }
 }
@@ -100,11 +100,28 @@ class NewPed {
 			Ped::Tobstacle *ob = new Ped::Tobstacle(x0, y0, x1, y1);
 			scene->addObstacle(ob);
 		}
+
+		void create_waypoint(int x, int y, int z) {
+			Ped::Twaypoint *wp = new Ped::Twaypoint(x, y, z);
+			waypoints.push_back(wp);	
+	    	std::vector<Ped::Tagent *> agents = scene->getAllAgents();
+/*
+    		for (std::vector<Ped::Twaypoint *>::iterator wp = std::begin(wps); pedWp != std::end(wps);
+        		 ++wp) {
+				
+				
+			}
+ */		
+		}
 		
 
 };
 
 int main(int argc, char *argv[]) {
+	/* START OF OOP CODE */
+	
+
+	/* END OF OOP CODE (DELETE EVERYTHING BELOW THIS LINE ONCE DONE) */
 
     ros::Duration one_sec(1.0);
     
@@ -334,10 +351,10 @@ int main(int argc, char *argv[]) {
     // in the scene, updating the position of each agent in allAgents	
 	
     for (int i=0; i<7000; ++i) {
-	pub_obstacles_.publish(allObs);
-	pub_agent_states_.publish(allAgents);
-	pub_agent_groups_.publish(allGroups);
-	pub_waypoints_.publish(allWaypoints);
+		pub_obstacles_.publish(allObs);
+		pub_agent_states_.publish(allAgents);
+		pub_agent_groups_.publish(allGroups);
+		pub_waypoints_.publish(allWaypoints);
 
         pedscene->moveAgents(0.2);
     	std::vector<Ped::Tagent *> pedAgents = pedscene->getAllAgents();

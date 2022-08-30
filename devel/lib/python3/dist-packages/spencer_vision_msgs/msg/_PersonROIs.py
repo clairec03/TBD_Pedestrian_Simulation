@@ -11,7 +11,7 @@ import spencer_vision_msgs.msg
 import std_msgs.msg
 
 class PersonROIs(genpy.Message):
-  _md5sum = "39d733db5b2ece3bd129f8a360116d23"
+  _md5sum = "5494785c7ce344707d7018890c22c251"
   _type = "spencer_vision_msgs/PersonROIs"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """# Message describing an array of rectangular regions of interest in a depth or RGB image containing a part of a person (e.g. head, face, full body...), which is usually encoded in the topic title
@@ -46,6 +46,7 @@ MSG: spencer_vision_msgs/PersonROI
 #
 
 uint64          detection_id
+float64         confidence
 
 sensor_msgs/RegionOfInterest    roi
 
@@ -141,8 +142,8 @@ bool do_rectify
       length = len(self.elements)
       buff.write(_struct_I.pack(length))
       for val1 in self.elements:
-        _x = val1.detection_id
-        buff.write(_get_struct_Q().pack(_x))
+        _x = val1
+        buff.write(_get_struct_Qd().pack(_x.detection_id, _x.confidence))
         _v1 = val1.roi
         _x = _v1
         buff.write(_get_struct_4IB().pack(_x.x_offset, _x.y_offset, _x.height, _x.width, _x.do_rectify))
@@ -199,9 +200,10 @@ bool do_rectify
       self.elements = []
       for i in range(0, length):
         val1 = spencer_vision_msgs.msg.PersonROI()
+        _x = val1
         start = end
-        end += 8
-        (val1.detection_id,) = _get_struct_Q().unpack(str[start:end])
+        end += 16
+        (_x.detection_id, _x.confidence,) = _get_struct_Qd().unpack(str[start:end])
         _v2 = val1.roi
         _x = _v2
         start = end
@@ -244,8 +246,8 @@ bool do_rectify
       length = len(self.elements)
       buff.write(_struct_I.pack(length))
       for val1 in self.elements:
-        _x = val1.detection_id
-        buff.write(_get_struct_Q().pack(_x))
+        _x = val1
+        buff.write(_get_struct_Qd().pack(_x.detection_id, _x.confidence))
         _v3 = val1.roi
         _x = _v3
         buff.write(_get_struct_4IB().pack(_x.x_offset, _x.y_offset, _x.height, _x.width, _x.do_rectify))
@@ -303,9 +305,10 @@ bool do_rectify
       self.elements = []
       for i in range(0, length):
         val1 = spencer_vision_msgs.msg.PersonROI()
+        _x = val1
         start = end
-        end += 8
-        (val1.detection_id,) = _get_struct_Q().unpack(str[start:end])
+        end += 16
+        (_x.detection_id, _x.confidence,) = _get_struct_Qd().unpack(str[start:end])
         _v4 = val1.roi
         _x = _v4
         start = end
@@ -333,9 +336,9 @@ def _get_struct_4IB():
     if _struct_4IB is None:
         _struct_4IB = struct.Struct("<4IB")
     return _struct_4IB
-_struct_Q = None
-def _get_struct_Q():
-    global _struct_Q
-    if _struct_Q is None:
-        _struct_Q = struct.Struct("<Q")
-    return _struct_Q
+_struct_Qd = None
+def _get_struct_Qd():
+    global _struct_Qd
+    if _struct_Qd is None:
+        _struct_Qd = struct.Struct("<Qd")
+    return _struct_Qd
