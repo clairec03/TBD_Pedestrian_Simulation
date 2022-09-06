@@ -55,17 +55,18 @@
 #include <pedsim_msgs/SocialRelations.h>
 
 /* Visualizer stuff */
-/*
 #include <pedsim_msgs/TrackedGroup.h>
 #include <pedsim_msgs/TrackedGroups.h>
 #include <pedsim_msgs/TrackedPerson.h>
 #include <pedsim_msgs/TrackedPersons.h>
-*/
 
+// Import spencer tracking messages
 #include <spencer_tracking_msgs/TrackedGroup.h>
 #include <spencer_tracking_msgs/TrackedGroups.h>
 #include <spencer_tracking_msgs/TrackedPerson.h>
 #include <spencer_tracking_msgs/TrackedPersons.h>
+#include <spencer_tracking_msgs/DetectedPerson.h>
+#include <spencer_tracking_msgs/DetectedPersons.h>
 
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/PoseStamped.h>
@@ -121,6 +122,7 @@ class SimVisualizer {
   ros::Publisher pub_group_visuals_;
   ros::Publisher pub_forces_;
   ros::Publisher pub_waypoints_;
+  ros::Publisher pub_people_detected_;
 
   /// Subscribers.
   ros::Subscriber sub_states_;

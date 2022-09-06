@@ -20,6 +20,12 @@ pedsim_ros/pedsim_visualizer/CMakeFiles/pedsim_visualizer_node.dir/src/sim_visua
  /home/clairechen/pedsim_workspace/devel/include/pedsim_msgs/Waypoint.h
  /home/clairechen/pedsim_workspace/devel/include/pedsim_msgs/Waypoints.h
  /home/clairechen/pedsim_workspace/devel/include/pedsim_visualizer/PedsimVisualizerConfig.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/DetectedPerson.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/DetectedPersons.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedGroup.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedGroups.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedPerson.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedPersons.h
  /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_utils/include/pedsim_utils/geometry.h
  /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/include/pedsim_visualizer/sim_visualizer.h
  /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/src/sim_visualizer.cpp
@@ -175,6 +181,12 @@ pedsim_ros/pedsim_visualizer/CMakeFiles/pedsim_visualizer_node.dir/src/sim_visua
  /home/clairechen/pedsim_workspace/devel/include/pedsim_msgs/Waypoint.h
  /home/clairechen/pedsim_workspace/devel/include/pedsim_msgs/Waypoints.h
  /home/clairechen/pedsim_workspace/devel/include/pedsim_visualizer/PedsimVisualizerConfig.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/DetectedPerson.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/DetectedPersons.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedGroup.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedGroups.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedPerson.h
+ /home/clairechen/pedsim_workspace/devel/include/spencer_tracking_msgs/TrackedPersons.h
  /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/include/pedsim_visualizer/sim_visualizer.h
  /home/clairechen/pedsim_workspace/src/pedsim_ros/pedsim_visualizer/src/sim_visualizer_node.cpp
  /opt/ros/noetic/include/dynamic_reconfigure/BoolParameter.h

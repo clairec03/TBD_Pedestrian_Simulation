@@ -363,6 +363,12 @@ int main(int argc, char *argv[]) {
 	     ++pedAgent) {
 		int id = (*pedAgent)->getid();
 		pedsim_msgs::AgentState currAgent = (allAgents.agent_states)[id];
+		Ped::Tvector newVelocities = (*pedAgent)->getVelocity();
+		geometry_msgs::Vector3 velocities = currAgent.twist.linear;
+		velocities.x = newVelocities.x;
+		velocities.y = newVelocities.y;
+		velocities.z = newVelocities.z;
+		currAgent.twist.linear = velocities;
 		geometry_msgs::Pose agentPose = currAgent.pose;
 		geometry_msgs::Point oldPos = agentPose.position;
 		Ped::Tvector newPos = (*pedAgent)->getPosition();

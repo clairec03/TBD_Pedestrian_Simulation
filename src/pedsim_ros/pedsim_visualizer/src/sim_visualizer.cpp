@@ -29,12 +29,34 @@
 */
 
 #include <pedsim_visualizer/sim_visualizer.h>
+#include <cmath>
+#include <ctgmath>
+#include <string>
+#include <cstring>
+#include <cstdlib>
 
 #include <pedsim_utils/geometry.h>
+
+std::string frame = "odom"; 
+
+std_msgs::Header createMsgHeader() {
+  std_msgs::Header msg_header;
+  msg_header.stamp = ros::Time::now();
+  msg_header.frame_id = frame;
+  return msg_header;
+}
 
 namespace pedsim {
 
 const static double DEFAULT_VIZ_HZ = 25.0;
+static int id = 0;
+
+static double covar[36] = {1, 0, 0, 0, 0, 0,
+						   0, 1, 0, 0, 0, 0,
+						   0, 0, 1, 0, 0, 0,
+						   0, 0, 0, 1, 0, 0,
+						   0, 0, 0, 0, 1, 0,
+						   0, 0, 0, 0, 0, 1};
 
 SimVisualizer::SimVisualizer(const ros::NodeHandle& node_in) : nh_{node_in} {
   setupPublishersAndSubscribers();
@@ -46,6 +68,7 @@ SimVisualizer::SimVisualizer(const ros::NodeHandle& node_in) : nh_{node_in} {
 SimVisualizer::~SimVisualizer() {
   pub_obstacles_visuals_.shutdown();
   pub_person_visuals_.shutdown();
+  // pub_people_detected_.shutdown();
   pub_group_visuals_.shutdown();
 
   /// Subscribers.
@@ -112,8 +135,10 @@ void SimVisualizer::publishAgentVisuals() {
   geometry_msgs::Point p2;
 
 
-  pedsim_msgs::TrackedPersons tracked_people;
-  tracked_people.header = current_states->header;
+ // pedsim_msgs::TrackedPersons tracked_people;
+  spencer_tracking_msgs::DetectedPersons tracked_people;
+  tracked_people.header = createMsgHeader();
+  // tracked_people.header = current_states->header;
 
   for (const auto& agent_state : current_states->agent_states) {
 
@@ -130,6 +155,52 @@ void SimVisualizer::publishAgentVisuals() {
     p1.z = agent_state.pose.position.z;
     force_marker.points.push_back(p1);
 
+	// Add spencer tracking
+
+  	spencer_tracking_msgs::DetectedPerson tracked_person;
+	tracked_person.detection_id = id;
+	id++;
+	
+
+	tracked_person.confidence = 1.0;
+	geometry_msgs::PoseWithCovariance pose_with_covar;
+	for (int i = 0; i < 36; i++) {
+		pose_with_covar.covariance[i] = covar[i];
+	}
+	geometry_msgs::Pose pose;
+	geometry_msgs::Point position;
+	position.x = agent_state.pose.position.x;
+    position.y = agent_state.pose.position.y;
+    position.z = agent_state.pose.position.z;
+	pose.position = position;
+    
+	geometry_msgs::Quaternion orientation;
+
+	double yaw = atan2(agent_state.twist.linear.y, agent_state.twist.linear.x); 
+	double pitch = 0;
+	double roll = 0;
+	// Source code below from wikipedia
+	// Abbreviations for the various angular functions
+    double cy = cos(yaw * 0.5);
+    double sy = sin(yaw * 0.5);
+    double cp = cos(pitch * 0.5);
+    double sp = sin(pitch * 0.5);
+    double cr = cos(roll * 0.5);
+    double sr = sin(roll * 0.5);
+
+	orientation.x = sr * cp * cy - cr * sp * sy; 
+	orientation.y = cr * sp * cy + sr * cp * sy;
+	orientation.z = cr * cp * sy - sr * sp * cy;
+	orientation.w = cr * cp * cy + sr * sp * sy;
+	// Reference source code ends here
+
+	pose.orientation = orientation;
+	pose_with_covar.pose = pose;
+
+	tracked_person.pose = pose_with_covar;	
+	tracked_people.detections.push_back(tracked_person);
+
+/*
     // desired_force
     force_marker.id = 0;
     p2.x = p1.x + agent_state.forces.desired_force.x;
@@ -178,9 +249,11 @@ void SimVisualizer::publishAgentVisuals() {
     person.twist = twist_with_cov;
 
     tracked_people.tracks.push_back(person);
+*/
   }
 
-  pub_person_visuals_.publish(tracked_people);
+  // pub_person_visuals_.publish(tracked_people);
+  pub_people_detected_.publish(tracked_people);
   pub_forces_.publish(forces_markers);
   q_people_.pop();
 }
@@ -333,8 +406,10 @@ void SimVisualizer::setupPublishersAndSubscribers() {
       nh_.advertise<spencer_tracking_msgs::TrackedPersons>("tracked_persons", 1);
   pub_group_visuals_ =
       nh_.advertise<spencer_tracking_msgs::TrackedGroups>("tracked_groups", 1);
+  pub_people_detected_ = 
+	  nh_.advertise<spencer_tracking_msgs::DetectedPersons>("detected_people", 1);
   pub_forces_ =
-    nh_.advertise<spencer_tracking_msgs::MarkerArray>("forces", 1);
+    nh_.advertise<visualization_msgs::MarkerArray>("forces", 1);
   pub_waypoints_ =
     nh_.advertise<visualization_msgs::MarkerArray>("waypoints", 1);
 
